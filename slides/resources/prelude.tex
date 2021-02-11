@@ -1,0 +1,75 @@
+\usepackage{newtxsf}
+\usepackage{fontspec}%[no-math]
+%\usepackage{unicode-math}
+%\usepackage{mathspec}
+\usepackage{minted}
+\usepackage{ragged2e}
+\usepackage{svg}
+\hypersetup{colorlinks,urlcolor=blue}
+
+\usepackage{polyglossia}
+\setdefaultlanguage{english}
+\setotherlanguages{russian} %[babelshorthands=true]
+
+%\usepackage{libertinus}
+
+\def\sff{Cuprum}
+%\def\ttf{Iosevka Extended}
+\def\ttf{JetBrains Mono NL}
+
+\newfontfamily\cyrillicfonttt{\ttf}[Scale=MatchLowercase]
+\setmonofont{\ttf}[Scale=MatchLowercase]
+\newfontfamily\cyrillicfontsf{\sff}[Ligatures=TeX,Scale=MatchLowercase]
+\setsansfont{\sff}[Ligatures=TeX,Scale=MatchLowercase]
+\newfontfamily\cyrillicfont{\sff}[Ligatures=TeX,Scale=MatchLowercase]
+\setmainfont{\sff}[Ligatures=TeX,Scale=MatchLowercase]
+
+%\newfontfamily\cyrillicfont{Times New Roman}[Scale=MatchLowercase]
+%\setromanfont[Ligatures=TeX,Scale=MatchLowercase]{Liberation Serif}
+%\newfontfamily{\tnr}{Times New Roman}[Scale=MatchUppercase]
+
+\usemintedstyle{borland}
+\usetheme{Darmstadt}
+\usecolortheme{seagull}
+\setbeamertemplate{navigation symbols}{}
+
+
+\author[Dmitry Luciv]{\includesvg[height=2cm]{./resources/spbu-logo.svg}\\
+	Dmitry V. Luciv}
+\institute{
+	Chair of Software Engineering
+}
+\date{}
+
+\setbeamertemplate{navigation symbols}{%
+	\usebeamerfont{footline}%
+	\usebeamercolor[fg]{footline}%
+	\insertframenumber~/~\inserttotalframenumber
+}
+
+% --------------------------------------
+
+\newcommand{\hello}{
+	\thispagestyle{empty}
+	\maketitle
+	\begin{frame}{Contents}
+		\tableofcontents
+	\end{frame}
+}
+
+\newcommand{\byebye}{
+	\section*{}
+	\begin{frame}{}
+		\thispagestyle{empty}
+		\begin{center} \Huge\sf\bf Questions please!
+			
+			\vfill
+			
+			\includegraphics[height=5cm]{./resources/qr-edu-dluciv-name.png}\\
+			\vspace{-1cm}
+			\href{https://edu.dluciv.name/}{\beamergotobutton{EDU.DLUCIV.NAME}}
+		\end{center}
+	\end{frame}
+}
+
+\endinput

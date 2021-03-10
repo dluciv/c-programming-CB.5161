@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <time.h>
-#include <malloc.h>
 
 #define N 5000
 float m[N][N];

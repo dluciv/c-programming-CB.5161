@@ -1,0 +1,12 @@
+[submodule "homeworks/spring-2021/Овинников Никита Дмитриевич/SPbSU_course"]
+	path = homeworks/spring-2021/Овинников Никита Дмитриевич/SPbSU_course
+	url = https://github.com/suwaruto/SPbSU_course
+	branch = master
+[submodule "homeworks/spring-2021/Хамандише Тедиус/mySPbUassignments"]
+	path = homeworks/spring-2021/Хамандише Тедиус/mySPbUassignments
+	url = https://github.com/TeddyHamz/mySPbUassignments.git
+	branch = main
+[submodule "homeworks/spring-2021/Ян Юйци/SPBU-C-Programing"]
+	path = homeworks/spring-2021/Ян Юйци/SPBU-C-Programing
+	url = https://github.com/Saint-Yuqi/SPBU-C-Programing
+	branch = main

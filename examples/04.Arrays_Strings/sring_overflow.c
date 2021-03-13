@@ -1,12 +1,19 @@
 #include <stdio.h>
 #include <string.h>
 
-int main()
+int main(void)
 {
-    char s[20] = "Hello! ";
-    char name[8];
-    scanf("%7s", name);
+    char s[40] = "Hello, ";
+    char name[20];
+    puts("What is your name?");
+
+    // scanf %s -- string, %[^\n]s -- string with spaces (multiple words)
+    // Fix format string to also avoid overflow.
+    // See man 3 scanf or https://www.man7.org/linux/man-pages/man3/scanf.3.html#EXAMPLES
+    scanf("%[^\n]s", name);
+
     strcat(s, name);
-    printf("%d, %s\n", strlen(s), s);
+    strcat(s, "!");
+    puts(s);
     return 0;
 }

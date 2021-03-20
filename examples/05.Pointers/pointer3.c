@@ -3,7 +3,7 @@
 int main(int argc, const char *argv[])
 {
   // ....
-  int tot = 2086678; // ...really calculate total length or args + spaces between
+  int tot = 2086678; // ...really calculate total length or args + spaces between using strlen fnuction
   // ....
 
   char a[tot + 1];

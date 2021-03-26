@@ -10,3 +10,6 @@
 	path = homeworks/spring-2021/Ян Юйци/SPBU-C-Programing
 	url = https://github.com/Saint-Yuqi/SPBU-C-Programing
 	branch = main
+[submodule "homeworks/spring-2021/Степанов Арсений Константинович/c_language_spbu"]
+	path = homeworks/spring-2021/Степанов Арсений Константинович/c_language_spbu
+	url = https://github.com/ctzvsk/c_language_spbu

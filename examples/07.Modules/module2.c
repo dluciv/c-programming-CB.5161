@@ -6,11 +6,11 @@ int isqrt(int v)
 
   do
   {
-    int m = (l + u) / 2;
-    if(m * m < v)
-      l = m + 1;
+    int m = (l + u + 1) / 2;
+    if(m * m <= v)
+      l = m;
     else
-      u = m;
+      u = m - 1;
   }
   while(l < u);
 

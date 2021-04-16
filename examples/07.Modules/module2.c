@@ -7,14 +7,12 @@ int isqrt(int v)
   do
   {
     int m = (l + u) / 2;
-    if(l * l < v)
+    if(m * m < v)
       l = m + 1;
-    else if(u * u > v)
-      u = m - 1;
     else
-      break;
+      u = m;
   }
-  while(1);
+  while(l < u);
 
   return l;
 }

@@ -8,7 +8,7 @@ int main()
 {
   printf("%d\n", factorial(6));
 
-  for(int i = 0; i < 5; ++i)
+  for(int i = 0; i < 10; ++i)
     printf("%d -> %d\n", i, isqrt(i));
 
   printf("%d\n", mul(2,3));

@@ -13,3 +13,7 @@
 [submodule "homeworks/spring-2021/Степанов Арсений Константинович/c_language_spbu"]
 	path = homeworks/spring-2021/Степанов Арсений Константинович/c_language_spbu
 	url = https://github.com/ctzvsk/c_language_spbu
+[submodule "homeworks/spring-2021/Козгунов Никита Владимирович/C-programming"]
+	path = homeworks/spring-2021/Козгунов Никита Владимирович/C-programming
+	url = https://github.com/kozgunov/C-programming.git
+	branch = main

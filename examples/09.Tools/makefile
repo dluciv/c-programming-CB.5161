@@ -1,6 +1,6 @@
-CC=clang
+CC=gcc
 CCOPT=-g
-LNK=clang
+LNK=gcc
 
 %.o : %.c
 	$(CC) -c $(CCOPT) -o $@ $<

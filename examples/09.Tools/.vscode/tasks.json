@@ -1,16 +1,24 @@
 {
-    // See https://go.microsoft.com/fwlink/?LinkId=733558
-    // for the documentation about the tasks.json format
-    "version": "2.0.0",
     "tasks": [
         {
-            "name": "Build Debug",
-            "label": "builddbg"
-            "type": "shell",
-            "command": "make all",
+            "type": "cppbuild",
+            "label": "debug_build",
+            "command": "make",
+            "args": [
+                "program",
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
             "problemMatcher": [
                 "$gcc"
-            ]
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Created automatically and edited manually"
         }
-    ]
+    ],
+    "version": "2.0.0"
 }

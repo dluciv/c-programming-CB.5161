@@ -17,3 +17,11 @@ cleanall : clean
 	- rm program
 
 mrproper : cleanall
+
+# Advanced feature: #include file dependencies
+# Run `make depends` before `make all`
+
+depends :
+	makedepend -f makefile.hdrdep *.c
+
+include makefile.hdrdep

@@ -12,9 +12,11 @@ all : program
 
 clean :
 	- rm *.o
+	- rm *.hdrdep.bak
 
 cleanall : clean
 	- rm program
+	- echo > makefile.hdrdep
 
 mrproper : cleanall
 

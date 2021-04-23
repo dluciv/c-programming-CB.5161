@@ -1,6 +1,19 @@
 CC=clang
+CCOPT=-g
+LNK=clang
 
-all :
-	$(CC) -c -g prog.c
-	$(CC) -c -g mod.c
-	$(CC) -g prog.o mod.o
+%.o : %.c
+	$(CC) -c $(CCOPT) -o $@ $<
+
+program : mod.o prog.o
+	$(LNK) -o $@ $?
+
+all : program
+
+clean :
+	- rm *.o
+
+cleanall : clean
+	- rm program
+
+mrproper : cleanall

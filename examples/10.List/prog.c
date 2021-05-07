@@ -17,5 +17,9 @@ int main()
     l = l_remove(l, 2);
     l_print(l);
 
+    // deallocate list elements one by one
+    while(l)
+        l = l_remove(l, 0);
+
     return 0;
 }

@@ -11,4 +11,4 @@ pushd $Z88DK_ROOT
 popd
 
 # build tape image
-zcc +zx -compiler sccz80 -O --opt-code-speed -lndos -lm -create-app $*
+zcc +zx -compiler sccz80 -O --opt-code-size -lndos -lm -create-app $*

@@ -15,6 +15,8 @@ float pi_approx(int n){
     y=rand();
 
     if (sqrt(x*x+y*y) < sqrt((double)RAND_MAX*RAND_MAX))
-      sum++; }
+      sum++;
+    }
 
-  return 4*(float)sum/(float)n; }
+  return 4*(float)sum/(float)n;
+}

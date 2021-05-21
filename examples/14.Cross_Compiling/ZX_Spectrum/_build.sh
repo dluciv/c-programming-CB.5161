@@ -10,5 +10,13 @@ pushd $Z88DK_ROOT
 . set_environment.sh
 popd
 
+# Z88
+CCOPTS='-compiler sccz80 -SO3'
+CCLIBS='-lndos -lm'
+
+# SDCC
+# CCOPTS='-compiler sdcc -SO3 -clib=sdcc_ix --max-allocs-per-node200000 --reserve-regs-iy'
+# CCLIBS='-lmath32'
+
 # build tape image
-zcc +zx -compiler sccz80 -O --opt-code-size -lndos -lm -create-app $*
+zcc +zx $CCOPTS $CCLIBS -create-app $*

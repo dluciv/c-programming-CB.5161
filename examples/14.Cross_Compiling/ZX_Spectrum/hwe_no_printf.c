@@ -28,7 +28,7 @@ FP_TYPE exxp(FP_TYPE x)
 {
     FP_TYPE result = 0.0f, t = 1.0f;
     long f = 1;
-    for(int i = 1; i < 10; t*=x, f *= i++)
+    for(int i = 1; i < 10; t *= x, f *= i++)
         result += t / f;
     return result;
 }

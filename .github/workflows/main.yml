@@ -12,3 +12,8 @@ jobs:
       - name: Build 09.Tools example
         working-directory: ./examples/09.Tools
         run: make
+      - name: Build 12.Graph example
+        working-directory: ./examples/12.Graph/igraph
+        run: |
+          apt install libigraph-dev
+          make

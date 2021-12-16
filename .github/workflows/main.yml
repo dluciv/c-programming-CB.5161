@@ -15,5 +15,5 @@ jobs:
       - name: Build 12.Graph example
         working-directory: ./examples/12.Graph/igraph
         run: |
-          sudo apt install libigraph0-dev
+          sudo apt install libigraph-dev
           make

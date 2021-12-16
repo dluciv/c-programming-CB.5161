@@ -1,4 +1,4 @@
-LIB_PACKAGES=libigraph0-dev
+LIB_PACKAGES=igraph
 CC=gcc
 CCOPT=`pkg-config --cflags $(LIB_PACKAGES)`
 LNK=gcc

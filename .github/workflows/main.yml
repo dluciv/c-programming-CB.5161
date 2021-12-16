@@ -8,10 +8,10 @@ jobs:
  
     steps:
       - run: |
-          pushd examples
+          cd examples
           
-          pushd 09.Tools
+          cd 09.Tools
           make
-          popd
+          cd ..
           
-          popd
+          cd ..

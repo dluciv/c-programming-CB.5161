@@ -1,0 +1,17 @@
+name: Build workflow
+ 
+on: [push]
+ 
+jobs:
+  build:
+    runs-on: ubuntu-latest
+ 
+    steps:
+      - run: |
+          pushd examples
+          
+          pushd 09.Tools
+          make
+          popd
+          
+          popd

@@ -7,11 +7,5 @@ jobs:
     runs-on: ubuntu-latest
  
     steps:
-      - run: |
-          cd examples
-          
-          cd 09.Tools
-          make
-          cd ..
-          
-          cd ..
+      - working-directory: ./examples/09.Tools
+        run: make

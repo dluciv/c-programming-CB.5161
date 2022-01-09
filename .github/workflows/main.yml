@@ -1,4 +1,4 @@
-name: Build workflow
+name: Check workflow
  
 on: [push]
  

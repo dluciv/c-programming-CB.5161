@@ -18,3 +18,7 @@ jobs:
           echo sudo apt install libigraph-dev
           echo make
           echo Fails on Ubuntu, so not yet...
+      - name: Кибердядька
+        uses: dluciv/cyber-under-tutor
+        with:
+          whom-to-greet: 'Я родимый'

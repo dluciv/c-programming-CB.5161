@@ -1,7 +1,5 @@
-name: Check workflow
- 
+name: Кибердядька
 on: [push]
- 
 jobs:
   check:
     runs-on: ubuntu-18.04

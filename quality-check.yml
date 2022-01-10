@@ -1,5 +1,5 @@
 ---
-badge: 'OK: 620‰'
+badge: 'OK: 810‰'
 message: '<?xml version="1.0" encoding="UTF-8"?> <results version="2"> <cppcheck version="2.6"/>
   <errors> <error id="arrayIndexOutOfBounds" severity="error" msg="Array &apos;a[1000]&apos;
   accessed at index 5000, which is out of bounds." verbose="Array &apos;a[1000]&apos;

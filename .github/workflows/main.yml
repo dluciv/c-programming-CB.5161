@@ -17,5 +17,5 @@ jobs:
           echo Fails on Ubuntu, so not yet...
       - name: Кибердядька
         uses: dluciv/cyber-under-tutor@main
-        with:
-          lines-per-msg: 200
+        # with:
+        #   lines-per-msg: 200

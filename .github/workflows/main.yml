@@ -18,4 +18,4 @@ jobs:
       - name: Кибердядька
         uses: dluciv/cyber-under-tutor@main
         with:
-          whom-to-greet: 'Я родимый'
+          lines-per-msg: 100

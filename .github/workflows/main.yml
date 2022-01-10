@@ -3,9 +3,8 @@ name: Check workflow
 on: [push]
  
 jobs:
-  build:
+  check:
     runs-on: ubuntu-18.04
-
     steps:
       - name: checkout repo
         uses: actions/checkout@v2

@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="174" height="20">
+<svg xmlns="http://www.w3.org/2000/svg" width="187" height="20">
     <linearGradient id="b" x2="0" y2="100%">
         <stop offset="0" stop-color="#bbb" stop-opacity=".1"/>
         <stop offset="1" stop-opacity=".1"/>
     </linearGradient>
     <mask id="anybadge_1">
-        <rect width="174" height="20" rx="3" fill="#fff"/>
+        <rect width="187" height="20" rx="3" fill="#fff"/>
     </mask>
     <g mask="url(#anybadge_1)">
         <path fill="#555" d="M0 0h130v20H0z"/>
-        <path fill="#dfb317" d="M130 0h44v20H130z"/>
-        <path fill="url(#b)" d="M0 0h174v20H0z"/>
+        <path fill="#e05d44" d="M130 0h57v20H130z"/>
+        <path fill="url(#b)" d="M0 0h187v20H0z"/>
     </g>
     <g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="11">
         <text x="66.0" y="15" fill="#010101" fill-opacity=".3">Кибердядька</text>
         <text x="65.0" y="14">Кибердядька</text>
     </g>
     <g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="11">
-        <text x="153.0" y="15" fill="#010101" fill-opacity=".3">81%</text>
-        <text x="152.0" y="14">81%</text>
+        <text x="159.5" y="15" fill="#010101" fill-opacity=".3">-736%</text>
+        <text x="158.5" y="14">-736%</text>
     </g>
 </svg>

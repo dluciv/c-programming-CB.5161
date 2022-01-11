@@ -10,4 +10,4 @@ cc_report: "<?xml version=\"1.0\" encoding=\"UTF-8\"?> <results version=\"2\"> <
   \ of side effects\" cwe=\"768\" file0=\"examples/05.Pointers/pointer1.c\"> <location\
   \ file=\"examples/05.Pointers/pointer1.c\" line=\"8\" column=\"25\"/> </error> </errors>\
   \ </results>\n"
-tot_score: 0.9981167608286252
+tot_score: 0.8116760828625236

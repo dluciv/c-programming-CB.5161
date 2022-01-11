@@ -17,6 +17,7 @@ jobs:
           echo Fails on Ubuntu, so not yet...
 
   quality-estimate:
+    name: 'Оценка качества Кибердядькой'
     uses: dluciv/cyber-under-tutor/.github/workflows/cyber-under-tutor.yml@main
     with:
       lines-per-msg: 200

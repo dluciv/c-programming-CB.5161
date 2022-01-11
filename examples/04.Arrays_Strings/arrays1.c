@@ -7,6 +7,6 @@ int main()
   int  a2[8] = {1, 2};
   char a3[8] = "1234567";
 
-  printf("%d, %d, %d, %d\n", sizeof(a0), sizeof(a1), sizeof(a2), sizeof(a3));
+  printf("%u, %u, %u, %u\n", sizeof(a0), sizeof(a1), sizeof(a2), sizeof(a3));
   return 0;
 }

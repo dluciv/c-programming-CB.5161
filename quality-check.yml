@@ -39,98 +39,99 @@ cc_report: "examples/02.Types_Formatting_IO/floats.c:6:5: portability: %d in for
   \ type is 'signed int'. [invalidPrintfArgType_uint]\n    printf(\"%u, %d\\n\", -1,\
   \ -1);\n    ^\nexamples/03.Macros/macro2.c:7:9: style: Variable 'x' is assigned\
   \ a value that is never used. [unreadVariable]\n  int x = 45;\n        ^\nexamples/04.Arrays_Strings/arrays1.c:10:3:\
-  \ portability: %u in format string (no. 1) requires 'unsigned int' but the argument\
+  \ portability: %lu in format string (no. 1) requires 'unsigned long' but the argument\
   \ type is 'size_t {aka unsigned long}'. [invalidPrintfArgType_uint]\n  printf(\"\
-  %u, %u, %u, %u\\n\", sizeof(a0), sizeof(a1), sizeof(a2), sizeof(a3));\n  ^\nexamples/04.Arrays_Strings/arrays1.c:10:3:\
-  \ portability: %u in format string (no. 2) requires 'unsigned int' but the argument\
+  %lu, %lu, %lu, %lu\\n\", sizeof(a0), sizeof(a1), sizeof(a2), sizeof(a3));\n  ^\n\
+  examples/04.Arrays_Strings/arrays1.c:10:3: portability: %lu in format string (no.\
+  \ 2) requires 'unsigned long' but the argument type is 'size_t {aka unsigned long}'.\
+  \ [invalidPrintfArgType_uint]\n  printf(\"%lu, %lu, %lu, %lu\\n\", sizeof(a0), sizeof(a1),\
+  \ sizeof(a2), sizeof(a3));\n  ^\nexamples/04.Arrays_Strings/arrays1.c:10:3: portability:\
+  \ %lu in format string (no. 3) requires 'unsigned long' but the argument type is\
+  \ 'size_t {aka unsigned long}'. [invalidPrintfArgType_uint]\n  printf(\"%lu, %lu,\
+  \ %lu, %lu\\n\", sizeof(a0), sizeof(a1), sizeof(a2), sizeof(a3));\n  ^\nexamples/04.Arrays_Strings/arrays1.c:10:3:\
+  \ portability: %lu in format string (no. 4) requires 'unsigned long' but the argument\
   \ type is 'size_t {aka unsigned long}'. [invalidPrintfArgType_uint]\n  printf(\"\
-  %u, %u, %u, %u\\n\", sizeof(a0), sizeof(a1), sizeof(a2), sizeof(a3));\n  ^\nexamples/04.Arrays_Strings/arrays1.c:10:3:\
-  \ portability: %u in format string (no. 3) requires 'unsigned int' but the argument\
-  \ type is 'size_t {aka unsigned long}'. [invalidPrintfArgType_uint]\n  printf(\"\
-  %u, %u, %u, %u\\n\", sizeof(a0), sizeof(a1), sizeof(a2), sizeof(a3));\n  ^\nexamples/04.Arrays_Strings/arrays1.c:10:3:\
-  \ portability: %u in format string (no. 4) requires 'unsigned int' but the argument\
-  \ type is 'size_t {aka unsigned long}'. [invalidPrintfArgType_uint]\n  printf(\"\
-  %u, %u, %u, %u\\n\", sizeof(a0), sizeof(a1), sizeof(a2), sizeof(a3));\n  ^\nexamples/04.Arrays_Strings/string_overflow.c:13:5:\
-  \ warning: scanf() without field width limits can crash with huge input data. [invalidscanf]\n\
-  \    scanf(\"%[^\\n]s\", name);\n    ^\nexamples/05.Pointers/pointer1.c:7:42: error:\
-  \ Array 'a[1000]' accessed at index 5000, which is out of bounds. [arrayIndexOutOfBounds]\n\
-  \  printf(\"%u\\t%u\\t%u\\n\", &a[0], a + 1, &a[5000]);\n                      \
-  \                   ^\nexamples/05.Pointers/pointer1.c:6:3: warning: %u in format\
-  \ string (no. 1) requires 'unsigned int' but the argument type is 'signed int *'.\
-  \ [invalidPrintfArgType_uint]\n  printf(\"%u\\t%u\\n\", &v, a);\n  ^\nexamples/05.Pointers/pointer1.c:6:3:\
-  \ warning: %u in format string (no. 2) requires 'unsigned int' but the argument\
-  \ type is 'int *'. [invalidPrintfArgType_uint]\n  printf(\"%u\\t%u\\n\", &v, a);\n\
-  \  ^\nexamples/05.Pointers/pointer1.c:7:3: warning: %u in format string (no. 1)\
-  \ requires 'unsigned int' but the argument type is 'int *'. [invalidPrintfArgType_uint]\n\
-  \  printf(\"%u\\t%u\\t%u\\n\", &a[0], a + 1, &a[5000]);\n  ^\nexamples/05.Pointers/pointer1.c:7:3:\
-  \ warning: %u in format string (no. 3) requires 'unsigned int' but the argument\
-  \ type is 'signed int *'. [invalidPrintfArgType_uint]\n  printf(\"%u\\t%u\\t%u\\\
-  n\", &a[0], a + 1, &a[5000]);\n  ^\nexamples/05.Pointers/pointer1.c:8:3: warning:\
-  \ %u in format string (no. 1) requires 'unsigned int' but the argument type is 'signed\
+  %lu, %lu, %lu, %lu\\n\", sizeof(a0), sizeof(a1), sizeof(a2), sizeof(a3));\n  ^\n\
+  examples/04.Arrays_Strings/string_overflow.c:13:5: warning: scanf() without field\
+  \ width limits can crash with huge input data. [invalidscanf]\n    scanf(\"%[^\\\
+  n]s\", name);\n    ^\nexamples/05.Pointers/pointer1.c:7:42: error: Array 'a[1000]'\
+  \ accessed at index 5000, which is out of bounds. [arrayIndexOutOfBounds]\n  printf(\"\
+  %u\\t%u\\t%u\\n\", &a[0], a + 1, &a[5000]);\n                                  \
+  \       ^\nexamples/05.Pointers/pointer1.c:6:3: warning: %u in format string (no.\
+  \ 1) requires 'unsigned int' but the argument type is 'signed int *'. [invalidPrintfArgType_uint]\n\
+  \  printf(\"%u\\t%u\\n\", &v, a);\n  ^\nexamples/05.Pointers/pointer1.c:6:3: warning:\
+  \ %u in format string (no. 2) requires 'unsigned int' but the argument type is 'int\
+  \ *'. [invalidPrintfArgType_uint]\n  printf(\"%u\\t%u\\n\", &v, a);\n  ^\nexamples/05.Pointers/pointer1.c:7:3:\
+  \ warning: %u in format string (no. 1) requires 'unsigned int' but the argument\
+  \ type is 'int *'. [invalidPrintfArgType_uint]\n  printf(\"%u\\t%u\\t%u\\n\", &a[0],\
+  \ a + 1, &a[5000]);\n  ^\nexamples/05.Pointers/pointer1.c:7:3: warning: %u in format\
+  \ string (no. 3) requires 'unsigned int' but the argument type is 'signed int *'.\
+  \ [invalidPrintfArgType_uint]\n  printf(\"%u\\t%u\\t%u\\n\", &a[0], a + 1, &a[5000]);\n\
+  \  ^\nexamples/05.Pointers/pointer1.c:8:3: warning: %u in format string (no. 1)\
+  \ requires 'unsigned int' but the argument type is 'signed int *'. [invalidPrintfArgType_uint]\n\
+  \  printf(\"%u\\t%u\\n\", p++, p);\n  ^\nexamples/05.Pointers/pointer1.c:8:3: warning:\
+  \ %u in format string (no. 2) requires 'unsigned int' but the argument type is 'signed\
   \ int *'. [invalidPrintfArgType_uint]\n  printf(\"%u\\t%u\\n\", p++, p);\n  ^\n\
-  examples/05.Pointers/pointer1.c:8:3: warning: %u in format string (no. 2) requires\
-  \ 'unsigned int' but the argument type is 'signed int *'. [invalidPrintfArgType_uint]\n\
-  \  printf(\"%u\\t%u\\n\", p++, p);\n  ^\nexamples/05.Pointers/pointer1.c:8:25: error:\
-  \ Expression '\"%u\\t%u\\n\",p++,p' depends on order of evaluation of side effects\
-  \ [unknownEvaluationOrder]\n  printf(\"%u\\t%u\\n\", p++, p);\n                \
-  \        ^\nexamples/06.Structs_Unions/floating_fields.c:33:3: warning: %d in format\
-  \ string (no. 3) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]\n\
-  \  printf(\"S: %d\\t E: %03u (%03d) \", u.ff.sign, u.ff.exponent, u.ff.exponent\
-  \ - 127);\n  ^\nexamples/06.Structs_Unions/struct1.c:21:3: portability: %d in format\
-  \ string (no. 1) requires 'int' but the argument type is 'size_t {aka unsigned long}'.\
-  \ [invalidPrintfArgType_sint]\n  printf(\"%d\\n\", sizeof(point2d));\n  ^\nexamples/06.Structs_Unions/struct2.c:23:3:\
+  examples/05.Pointers/pointer1.c:8:25: error: Expression '\"%u\\t%u\\n\",p++,p' depends\
+  \ on order of evaluation of side effects [unknownEvaluationOrder]\n  printf(\"%u\\\
+  t%u\\n\", p++, p);\n                        ^\nexamples/06.Structs_Unions/floating_fields.c:33:3:\
+  \ warning: %d in format string (no. 3) requires 'int' but the argument type is 'unsigned\
+  \ int'. [invalidPrintfArgType_sint]\n  printf(\"S: %d\\t E: %03u (%03d) \", u.ff.sign,\
+  \ u.ff.exponent, u.ff.exponent - 127);\n  ^\nexamples/06.Structs_Unions/struct1.c:21:3:\
   \ portability: %d in format string (no. 1) requires 'int' but the argument type\
-  \ is 'size_t {aka unsigned long}'. [invalidPrintfArgType_sint]\n  printf(\"%d, %d\\\
-  n\", sizeof(point3d), sizeof(point3d *));\n  ^\nexamples/06.Structs_Unions/struct2.c:23:3:\
+  \ is 'size_t {aka unsigned long}'. [invalidPrintfArgType_sint]\n  printf(\"%d\\\
+  n\", sizeof(point2d));\n  ^\nexamples/06.Structs_Unions/struct2.c:23:3: portability:\
+  \ %d in format string (no. 1) requires 'int' but the argument type is 'size_t {aka\
+  \ unsigned long}'. [invalidPrintfArgType_sint]\n  printf(\"%d, %d\\n\", sizeof(point3d),\
+  \ sizeof(point3d *));\n  ^\nexamples/06.Structs_Unions/struct2.c:23:3: portability:\
+  \ %d in format string (no. 2) requires 'int' but the argument type is 'size_t {aka\
+  \ unsigned long}'. [invalidPrintfArgType_sint]\n  printf(\"%d, %d\\n\", sizeof(point3d),\
+  \ sizeof(point3d *));\n  ^\nexamples/06.Structs_Unions/struct3.c:23:3: portability:\
+  \ %d in format string (no. 1) requires 'int' but the argument type is 'size_t {aka\
+  \ unsigned long}'. [invalidPrintfArgType_sint]\n  printf(\"%d, %d\\n\", sizeof(point3d),\
+  \ sizeof(point3d *));\n  ^\nexamples/06.Structs_Unions/struct3.c:23:3: portability:\
+  \ %d in format string (no. 2) requires 'int' but the argument type is 'size_t {aka\
+  \ unsigned long}'. [invalidPrintfArgType_sint]\n  printf(\"%d, %d\\n\", sizeof(point3d),\
+  \ sizeof(point3d *));\n  ^\nexamples/06.Structs_Unions/variant.c:34:3: portability:\
+  \ %d in format string (no. 1) requires 'int' but the argument type is 'size_t {aka\
+  \ unsigned long}'. [invalidPrintfArgType_sint]\n  printf(\"%d, %d\\n\", sizeof(var_type),\
+  \ sizeof(number));\n  ^\nexamples/06.Structs_Unions/variant.c:34:3: portability:\
+  \ %d in format string (no. 2) requires 'int' but the argument type is 'size_t {aka\
+  \ unsigned long}'. [invalidPrintfArgType_sint]\n  printf(\"%d, %d\\n\", sizeof(var_type),\
+  \ sizeof(number));\n  ^\nexamples/13.Faster_Python_C/2.CFFI/pi_approx.c:10:12: style:\
+  \ The scope of the variable 'x' can be reduced. [variableScope]\n  double i,x,y,sum=0;\n\
+  \           ^\nexamples/13.Faster_Python_C/2.CFFI/pi_approx.c:10:14: style: The\
+  \ scope of the variable 'y' can be reduced. [variableScope]\n  double i,x,y,sum=0;\n\
+  \             ^\nexamples/14.Cross_Compiling/ZX_Spectrum/hwe.c:16:5: portability:\
+  \ %d in format string (no. 1) requires 'int' but the argument type is 'size_t {aka\
+  \ unsigned long}'. [invalidPrintfArgType_sint]\n    printf(\"%d, %d, %d, %d\\n\"\
+  , sizeof(int), sizeof(long), sizeof(float), sizeof(double));\n    ^\nexamples/14.Cross_Compiling/ZX_Spectrum/hwe.c:16:5:\
   \ portability: %d in format string (no. 2) requires 'int' but the argument type\
-  \ is 'size_t {aka unsigned long}'. [invalidPrintfArgType_sint]\n  printf(\"%d, %d\\\
-  n\", sizeof(point3d), sizeof(point3d *));\n  ^\nexamples/06.Structs_Unions/struct3.c:23:3:\
-  \ portability: %d in format string (no. 1) requires 'int' but the argument type\
-  \ is 'size_t {aka unsigned long}'. [invalidPrintfArgType_sint]\n  printf(\"%d, %d\\\
-  n\", sizeof(point3d), sizeof(point3d *));\n  ^\nexamples/06.Structs_Unions/struct3.c:23:3:\
-  \ portability: %d in format string (no. 2) requires 'int' but the argument type\
-  \ is 'size_t {aka unsigned long}'. [invalidPrintfArgType_sint]\n  printf(\"%d, %d\\\
-  n\", sizeof(point3d), sizeof(point3d *));\n  ^\nexamples/06.Structs_Unions/variant.c:34:3:\
-  \ portability: %d in format string (no. 1) requires 'int' but the argument type\
-  \ is 'size_t {aka unsigned long}'. [invalidPrintfArgType_sint]\n  printf(\"%d, %d\\\
-  n\", sizeof(var_type), sizeof(number));\n  ^\nexamples/06.Structs_Unions/variant.c:34:3:\
-  \ portability: %d in format string (no. 2) requires 'int' but the argument type\
-  \ is 'size_t {aka unsigned long}'. [invalidPrintfArgType_sint]\n  printf(\"%d, %d\\\
-  n\", sizeof(var_type), sizeof(number));\n  ^\nexamples/13.Faster_Python_C/2.CFFI/pi_approx.c:10:12:\
-  \ style: The scope of the variable 'x' can be reduced. [variableScope]\n  double\
-  \ i,x,y,sum=0;\n           ^\nexamples/13.Faster_Python_C/2.CFFI/pi_approx.c:10:14:\
-  \ style: The scope of the variable 'y' can be reduced. [variableScope]\n  double\
-  \ i,x,y,sum=0;\n             ^\nexamples/14.Cross_Compiling/ZX_Spectrum/hwe.c:16:5:\
-  \ portability: %d in format string (no. 1) requires 'int' but the argument type\
   \ is 'size_t {aka unsigned long}'. [invalidPrintfArgType_sint]\n    printf(\"%d,\
   \ %d, %d, %d\\n\", sizeof(int), sizeof(long), sizeof(float), sizeof(double));\n\
   \    ^\nexamples/14.Cross_Compiling/ZX_Spectrum/hwe.c:16:5: portability: %d in format\
-  \ string (no. 2) requires 'int' but the argument type is 'size_t {aka unsigned long}'.\
+  \ string (no. 3) requires 'int' but the argument type is 'size_t {aka unsigned long}'.\
   \ [invalidPrintfArgType_sint]\n    printf(\"%d, %d, %d, %d\\n\", sizeof(int), sizeof(long),\
   \ sizeof(float), sizeof(double));\n    ^\nexamples/14.Cross_Compiling/ZX_Spectrum/hwe.c:16:5:\
-  \ portability: %d in format string (no. 3) requires 'int' but the argument type\
-  \ is 'size_t {aka unsigned long}'. [invalidPrintfArgType_sint]\n    printf(\"%d,\
-  \ %d, %d, %d\\n\", sizeof(int), sizeof(long), sizeof(float), sizeof(double));\n\
-  \    ^\nexamples/14.Cross_Compiling/ZX_Spectrum/hwe.c:16:5: portability: %d in format\
-  \ string (no. 4) requires 'int' but the argument type is 'size_t {aka unsigned long}'.\
-  \ [invalidPrintfArgType_sint]\n    printf(\"%d, %d, %d, %d\\n\", sizeof(int), sizeof(long),\
-  \ sizeof(float), sizeof(double));\n    ^\nexamples/14.Cross_Compiling/ZX_Spectrum/hwe_no_printf.c:37:5:\
-  \ portability: %d in format string (no. 1) requires 'int' but the argument type\
+  \ portability: %d in format string (no. 4) requires 'int' but the argument type\
   \ is 'size_t {aka unsigned long}'. [invalidPrintfArgType_sint]\n    printf(\"%d,\
   \ %d, %d, %d\\n\", sizeof(int), sizeof(long), sizeof(float), sizeof(double));\n\
   \    ^\nexamples/14.Cross_Compiling/ZX_Spectrum/hwe_no_printf.c:37:5: portability:\
-  \ %d in format string (no. 2) requires 'int' but the argument type is 'size_t {aka\
+  \ %d in format string (no. 1) requires 'int' but the argument type is 'size_t {aka\
   \ unsigned long}'. [invalidPrintfArgType_sint]\n    printf(\"%d, %d, %d, %d\\n\"\
   , sizeof(int), sizeof(long), sizeof(float), sizeof(double));\n    ^\nexamples/14.Cross_Compiling/ZX_Spectrum/hwe_no_printf.c:37:5:\
-  \ portability: %d in format string (no. 3) requires 'int' but the argument type\
+  \ portability: %d in format string (no. 2) requires 'int' but the argument type\
   \ is 'size_t {aka unsigned long}'. [invalidPrintfArgType_sint]\n    printf(\"%d,\
   \ %d, %d, %d\\n\", sizeof(int), sizeof(long), sizeof(float), sizeof(double));\n\
   \    ^\nexamples/14.Cross_Compiling/ZX_Spectrum/hwe_no_printf.c:37:5: portability:\
-  \ %d in format string (no. 4) requires 'int' but the argument type is 'size_t {aka\
+  \ %d in format string (no. 3) requires 'int' but the argument type is 'size_t {aka\
   \ unsigned long}'. [invalidPrintfArgType_sint]\n    printf(\"%d, %d, %d, %d\\n\"\
-  , sizeof(int), sizeof(long), sizeof(float), sizeof(double));\n    ^\nnofile:0:0:\
-  \ information: Cppcheck cannot find all the include files (use --check-config for\
-  \ details) [missingIncludeSystem]\n\n"
+  , sizeof(int), sizeof(long), sizeof(float), sizeof(double));\n    ^\nexamples/14.Cross_Compiling/ZX_Spectrum/hwe_no_printf.c:37:5:\
+  \ portability: %d in format string (no. 4) requires 'int' but the argument type\
+  \ is 'size_t {aka unsigned long}'. [invalidPrintfArgType_sint]\n    printf(\"%d,\
+  \ %d, %d, %d\\n\", sizeof(int), sizeof(long), sizeof(float), sizeof(double));\n\
+  \    ^\nnofile:0:0: information: Cppcheck cannot find all the include files (use\
+  \ --check-config for details) [missingIncludeSystem]\n\n"
 cc_xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<results version=\"2\">\n   \
   \ <cppcheck version=\"2.6\"/>\n    <errors>\n        <error id=\"invalidPrintfArgType_sint\"\
   \ severity=\"portability\" msg=\"%d in format string (no. 1) requires &apos;int&apos;\
@@ -203,38 +204,39 @@ cc_xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<results version=\"2\">\n  
   \ cwe=\"563\" file0=\"examples/03.Macros/macro2.c\">\n            <location file=\"\
   examples/03.Macros/macro2.c\" line=\"7\" column=\"9\"/>\n            <symbol>x</symbol>\n\
   \        </error>\n        <error id=\"invalidPrintfArgType_uint\" severity=\"portability\"\
-  \ msg=\"%u in format string (no. 1) requires &apos;unsigned int&apos; but the argument\
-  \ type is &apos;size_t {aka unsigned long}&apos;.\" verbose=\"%u in format string\
-  \ (no. 1) requires &apos;unsigned int&apos; but the argument type is &apos;size_t\
+  \ msg=\"%lu in format string (no. 1) requires &apos;unsigned long&apos; but the\
+  \ argument type is &apos;size_t {aka unsigned long}&apos;.\" verbose=\"%lu in format\
+  \ string (no. 1) requires &apos;unsigned long&apos; but the argument type is &apos;size_t\
   \ {aka unsigned long}&apos;.\" cwe=\"686\" file0=\"examples/04.Arrays_Strings/arrays1.c\"\
   >\n            <location file=\"examples/04.Arrays_Strings/arrays1.c\" line=\"10\"\
   \ column=\"3\"/>\n        </error>\n        <error id=\"invalidPrintfArgType_uint\"\
-  \ severity=\"portability\" msg=\"%u in format string (no. 2) requires &apos;unsigned\
-  \ int&apos; but the argument type is &apos;size_t {aka unsigned long}&apos;.\" verbose=\"\
-  %u in format string (no. 2) requires &apos;unsigned int&apos; but the argument type\
-  \ is &apos;size_t {aka unsigned long}&apos;.\" cwe=\"686\" file0=\"examples/04.Arrays_Strings/arrays1.c\"\
-  >\n            <location file=\"examples/04.Arrays_Strings/arrays1.c\" line=\"10\"\
-  \ column=\"3\"/>\n        </error>\n        <error id=\"invalidPrintfArgType_uint\"\
-  \ severity=\"portability\" msg=\"%u in format string (no. 3) requires &apos;unsigned\
-  \ int&apos; but the argument type is &apos;size_t {aka unsigned long}&apos;.\" verbose=\"\
-  %u in format string (no. 3) requires &apos;unsigned int&apos; but the argument type\
-  \ is &apos;size_t {aka unsigned long}&apos;.\" cwe=\"686\" file0=\"examples/04.Arrays_Strings/arrays1.c\"\
-  >\n            <location file=\"examples/04.Arrays_Strings/arrays1.c\" line=\"10\"\
-  \ column=\"3\"/>\n        </error>\n        <error id=\"invalidPrintfArgType_uint\"\
-  \ severity=\"portability\" msg=\"%u in format string (no. 4) requires &apos;unsigned\
-  \ int&apos; but the argument type is &apos;size_t {aka unsigned long}&apos;.\" verbose=\"\
-  %u in format string (no. 4) requires &apos;unsigned int&apos; but the argument type\
-  \ is &apos;size_t {aka unsigned long}&apos;.\" cwe=\"686\" file0=\"examples/04.Arrays_Strings/arrays1.c\"\
-  >\n            <location file=\"examples/04.Arrays_Strings/arrays1.c\" line=\"10\"\
-  \ column=\"3\"/>\n        </error>\n        <error id=\"invalidscanf\" severity=\"\
-  warning\" msg=\"scanf() without field width limits can crash with huge input data.\"\
-  \ verbose=\"scanf() without field width limits can crash with huge input data. Add\
-  \ a field width specifier to fix this problem.\\012\\012Sample program that can\
-  \ crash:\\012\\012#include &lt;stdio.h&gt;\\012int main()\\012{\\012    char c[5];\\\
-  012    scanf(&quot;%s&quot;, c);\\012    return 0;\\012}\\012\\012Typing in 5 or\
-  \ more characters may make the program crash. The correct usage here is &apos;scanf(&quot;%4s&quot;,\
-  \ c);&apos;, as the maximum field width does not include the terminating null byte.\\\
-  012Source: http://linux.die.net/man/3/scanf\\012Source: http://www.opensource.apple.com/source/xnu/xnu-1456.1.26/libkern/stdio/scanf.c\"\
+  \ severity=\"portability\" msg=\"%lu in format string (no. 2) requires &apos;unsigned\
+  \ long&apos; but the argument type is &apos;size_t {aka unsigned long}&apos;.\"\
+  \ verbose=\"%lu in format string (no. 2) requires &apos;unsigned long&apos; but\
+  \ the argument type is &apos;size_t {aka unsigned long}&apos;.\" cwe=\"686\" file0=\"\
+  examples/04.Arrays_Strings/arrays1.c\">\n            <location file=\"examples/04.Arrays_Strings/arrays1.c\"\
+  \ line=\"10\" column=\"3\"/>\n        </error>\n        <error id=\"invalidPrintfArgType_uint\"\
+  \ severity=\"portability\" msg=\"%lu in format string (no. 3) requires &apos;unsigned\
+  \ long&apos; but the argument type is &apos;size_t {aka unsigned long}&apos;.\"\
+  \ verbose=\"%lu in format string (no. 3) requires &apos;unsigned long&apos; but\
+  \ the argument type is &apos;size_t {aka unsigned long}&apos;.\" cwe=\"686\" file0=\"\
+  examples/04.Arrays_Strings/arrays1.c\">\n            <location file=\"examples/04.Arrays_Strings/arrays1.c\"\
+  \ line=\"10\" column=\"3\"/>\n        </error>\n        <error id=\"invalidPrintfArgType_uint\"\
+  \ severity=\"portability\" msg=\"%lu in format string (no. 4) requires &apos;unsigned\
+  \ long&apos; but the argument type is &apos;size_t {aka unsigned long}&apos;.\"\
+  \ verbose=\"%lu in format string (no. 4) requires &apos;unsigned long&apos; but\
+  \ the argument type is &apos;size_t {aka unsigned long}&apos;.\" cwe=\"686\" file0=\"\
+  examples/04.Arrays_Strings/arrays1.c\">\n            <location file=\"examples/04.Arrays_Strings/arrays1.c\"\
+  \ line=\"10\" column=\"3\"/>\n        </error>\n        <error id=\"invalidscanf\"\
+  \ severity=\"warning\" msg=\"scanf() without field width limits can crash with huge\
+  \ input data.\" verbose=\"scanf() without field width limits can crash with huge\
+  \ input data. Add a field width specifier to fix this problem.\\012\\012Sample program\
+  \ that can crash:\\012\\012#include &lt;stdio.h&gt;\\012int main()\\012{\\012  \
+  \  char c[5];\\012    scanf(&quot;%s&quot;, c);\\012    return 0;\\012}\\012\\012Typing\
+  \ in 5 or more characters may make the program crash. The correct usage here is\
+  \ &apos;scanf(&quot;%4s&quot;, c);&apos;, as the maximum field width does not include\
+  \ the terminating null byte.\\012Source: http://linux.die.net/man/3/scanf\\012Source:\
+  \ http://www.opensource.apple.com/source/xnu/xnu-1456.1.26/libkern/stdio/scanf.c\"\
   \ cwe=\"119\" file0=\"examples/04.Arrays_Strings/string_overflow.c\">\n        \
   \    <location file=\"examples/04.Arrays_Strings/string_overflow.c\" line=\"13\"\
   \ column=\"5\"/>\n        </error>\n        <error id=\"arrayIndexOutOfBounds\"\

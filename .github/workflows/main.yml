@@ -1,7 +1,7 @@
-name: Кибердядька
+name: 'По коммиту'
 on: [push]
 jobs:
-  check:
+  build:
     runs-on: ubuntu-18.04
     steps:
       - name: checkout repo
@@ -15,7 +15,8 @@ jobs:
           echo sudo apt install libigraph-dev
           echo make
           echo Fails on Ubuntu, so not yet...
-      - name: Кибердядька
-        uses: dluciv/cyber-under-tutor@main
-        # with:
-        #   lines-per-msg: 200
+  check:
+    needs: build
+    uses: dluciv/cyber-under-tutor/.github/workflows/cyber-under-tutor.yml@main
+    with:
+      lines-per-msg: 200

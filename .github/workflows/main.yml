@@ -11,13 +11,13 @@ jobs:
         run: make
       - name: Build 12.Graph example
         working-directory: ./examples/12.Graph/igraph
-        run: |+
+        run: |
           echo sudo apt install libigraph-dev
           echo make
           echo Fails on Ubuntu, so not yet...
 
   quality-estimate:
-    name: 'Оценка качества Кибердядькой'
+    name: 'Оценка качества'
     uses: dluciv/cyber-under-tutor/.github/workflows/cyber-under-tutor.yml@main
     with:
       lines-per-msg: 200

@@ -16,7 +16,6 @@ jobs:
           echo make
           echo Fails on Ubuntu, so not yet...
   check:
-    needs: build
     uses: dluciv/cyber-under-tutor/.github/workflows/cyber-under-tutor.yml@main
     with:
       lines-per-msg: 200

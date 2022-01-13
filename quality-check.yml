@@ -1,4 +1,4 @@
-cc_messages: 39
+cc_messages: 34
 cc_report: "examples/02.Types_Formatting_IO/floats.c:6:5: portability: %d in format\
   \ string (no. 1) requires 'int' but the argument type is 'size_t {aka unsigned long}'.\
   \ [invalidPrintfArgType_sint]\n    printf(\"%d\\n\", sizeof(eps));\n    ^\nexamples/02.Types_Formatting_IO/integers_booleans.c:11:8:\
@@ -14,27 +14,7 @@ cc_report: "examples/02.Types_Formatting_IO/floats.c:6:5: portability: %d in for
   \ {\n             ^\nexamples/02.Types_Formatting_IO/integers_booleans.c:5:23: note:\
   \ Assignment 'v2=43', assigned value is 43\n    int v1 = 37, v2 = 43;\n        \
   \              ^\nexamples/02.Types_Formatting_IO/integers_booleans.c:15:14: note:\
-  \ Condition 'v2' is always true\n    if(v1 && v2) {\n             ^\nexamples/02.Types_Formatting_IO/integers_booleans.c:7:5:\
-  \ portability: %lu in format string (no. 1) requires 'unsigned long' but the argument\
-  \ type is 'size_t {aka unsigned long}'. [invalidPrintfArgType_uint]\n    printf(\"\
-  %lu, %lu, %lu, %lu, %lu\\n\", sizeof(short int), sizeof(int), sizeof(long int),\
-  \ sizeof(long long int), sizeof(void *));\n    ^\nexamples/02.Types_Formatting_IO/integers_booleans.c:7:5:\
-  \ portability: %lu in format string (no. 2) requires 'unsigned long' but the argument\
-  \ type is 'size_t {aka unsigned long}'. [invalidPrintfArgType_uint]\n    printf(\"\
-  %lu, %lu, %lu, %lu, %lu\\n\", sizeof(short int), sizeof(int), sizeof(long int),\
-  \ sizeof(long long int), sizeof(void *));\n    ^\nexamples/02.Types_Formatting_IO/integers_booleans.c:7:5:\
-  \ portability: %lu in format string (no. 3) requires 'unsigned long' but the argument\
-  \ type is 'size_t {aka unsigned long}'. [invalidPrintfArgType_uint]\n    printf(\"\
-  %lu, %lu, %lu, %lu, %lu\\n\", sizeof(short int), sizeof(int), sizeof(long int),\
-  \ sizeof(long long int), sizeof(void *));\n    ^\nexamples/02.Types_Formatting_IO/integers_booleans.c:7:5:\
-  \ portability: %lu in format string (no. 4) requires 'unsigned long' but the argument\
-  \ type is 'size_t {aka unsigned long}'. [invalidPrintfArgType_uint]\n    printf(\"\
-  %lu, %lu, %lu, %lu, %lu\\n\", sizeof(short int), sizeof(int), sizeof(long int),\
-  \ sizeof(long long int), sizeof(void *));\n    ^\nexamples/02.Types_Formatting_IO/integers_booleans.c:7:5:\
-  \ portability: %lu in format string (no. 5) requires 'unsigned long' but the argument\
-  \ type is 'size_t {aka unsigned long}'. [invalidPrintfArgType_uint]\n    printf(\"\
-  %lu, %lu, %lu, %lu, %lu\\n\", sizeof(short int), sizeof(int), sizeof(long int),\
-  \ sizeof(long long int), sizeof(void *));\n    ^\nexamples/02.Types_Formatting_IO/integers_booleans.c:9:5:\
+  \ Condition 'v2' is always true\n    if(v1 && v2) {\n             ^\nexamples/02.Types_Formatting_IO/integers_booleans.c:9:5:\
   \ warning: %u in format string (no. 1) requires 'unsigned int' but the argument\
   \ type is 'signed int'. [invalidPrintfArgType_uint]\n    printf(\"%u, %d\\n\", -1,\
   \ -1);\n    ^\nexamples/03.Macros/macro2.c:7:9: style: Variable 'x' is assigned\
@@ -148,43 +128,11 @@ cc_xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<results version=\"2\">\n  
   \            <location file=\"examples/02.Types_Formatting_IO/integers_booleans.c\"\
   \ line=\"5\" column=\"23\" info=\"Assignment &apos;v2=43&apos;, assigned value is\
   \ 43\"/>\n        </error>\n        <error id=\"invalidPrintfArgType_uint\" severity=\"\
-  portability\" msg=\"%lu in format string (no. 1) requires &apos;unsigned long&apos;\
-  \ but the argument type is &apos;size_t {aka unsigned long}&apos;.\" verbose=\"\
-  %lu in format string (no. 1) requires &apos;unsigned long&apos; but the argument\
-  \ type is &apos;size_t {aka unsigned long}&apos;.\" cwe=\"686\" file0=\"examples/02.Types_Formatting_IO/integers_booleans.c\"\
-  >\n            <location file=\"examples/02.Types_Formatting_IO/integers_booleans.c\"\
-  \ line=\"7\" column=\"5\"/>\n        </error>\n        <error id=\"invalidPrintfArgType_uint\"\
-  \ severity=\"portability\" msg=\"%lu in format string (no. 2) requires &apos;unsigned\
-  \ long&apos; but the argument type is &apos;size_t {aka unsigned long}&apos;.\"\
-  \ verbose=\"%lu in format string (no. 2) requires &apos;unsigned long&apos; but\
-  \ the argument type is &apos;size_t {aka unsigned long}&apos;.\" cwe=\"686\" file0=\"\
-  examples/02.Types_Formatting_IO/integers_booleans.c\">\n            <location file=\"\
-  examples/02.Types_Formatting_IO/integers_booleans.c\" line=\"7\" column=\"5\"/>\n\
-  \        </error>\n        <error id=\"invalidPrintfArgType_uint\" severity=\"portability\"\
-  \ msg=\"%lu in format string (no. 3) requires &apos;unsigned long&apos; but the\
-  \ argument type is &apos;size_t {aka unsigned long}&apos;.\" verbose=\"%lu in format\
-  \ string (no. 3) requires &apos;unsigned long&apos; but the argument type is &apos;size_t\
-  \ {aka unsigned long}&apos;.\" cwe=\"686\" file0=\"examples/02.Types_Formatting_IO/integers_booleans.c\"\
-  >\n            <location file=\"examples/02.Types_Formatting_IO/integers_booleans.c\"\
-  \ line=\"7\" column=\"5\"/>\n        </error>\n        <error id=\"invalidPrintfArgType_uint\"\
-  \ severity=\"portability\" msg=\"%lu in format string (no. 4) requires &apos;unsigned\
-  \ long&apos; but the argument type is &apos;size_t {aka unsigned long}&apos;.\"\
-  \ verbose=\"%lu in format string (no. 4) requires &apos;unsigned long&apos; but\
-  \ the argument type is &apos;size_t {aka unsigned long}&apos;.\" cwe=\"686\" file0=\"\
-  examples/02.Types_Formatting_IO/integers_booleans.c\">\n            <location file=\"\
-  examples/02.Types_Formatting_IO/integers_booleans.c\" line=\"7\" column=\"5\"/>\n\
-  \        </error>\n        <error id=\"invalidPrintfArgType_uint\" severity=\"portability\"\
-  \ msg=\"%lu in format string (no. 5) requires &apos;unsigned long&apos; but the\
-  \ argument type is &apos;size_t {aka unsigned long}&apos;.\" verbose=\"%lu in format\
-  \ string (no. 5) requires &apos;unsigned long&apos; but the argument type is &apos;size_t\
-  \ {aka unsigned long}&apos;.\" cwe=\"686\" file0=\"examples/02.Types_Formatting_IO/integers_booleans.c\"\
-  >\n            <location file=\"examples/02.Types_Formatting_IO/integers_booleans.c\"\
-  \ line=\"7\" column=\"5\"/>\n        </error>\n        <error id=\"invalidPrintfArgType_uint\"\
-  \ severity=\"warning\" msg=\"%u in format string (no. 1) requires &apos;unsigned\
-  \ int&apos; but the argument type is &apos;signed int&apos;.\" verbose=\"%u in format\
-  \ string (no. 1) requires &apos;unsigned int&apos; but the argument type is &apos;signed\
-  \ int&apos;.\" cwe=\"686\" file0=\"examples/02.Types_Formatting_IO/integers_booleans.c\"\
-  >\n            <location file=\"examples/02.Types_Formatting_IO/integers_booleans.c\"\
+  warning\" msg=\"%u in format string (no. 1) requires &apos;unsigned int&apos; but\
+  \ the argument type is &apos;signed int&apos;.\" verbose=\"%u in format string (no.\
+  \ 1) requires &apos;unsigned int&apos; but the argument type is &apos;signed int&apos;.\"\
+  \ cwe=\"686\" file0=\"examples/02.Types_Formatting_IO/integers_booleans.c\">\n \
+  \           <location file=\"examples/02.Types_Formatting_IO/integers_booleans.c\"\
   \ line=\"9\" column=\"5\"/>\n        </error>\n        <error id=\"unreadVariable\"\
   \ severity=\"style\" msg=\"Variable &apos;x&apos; is assigned a value that is never\
   \ used.\" verbose=\"Variable &apos;x&apos; is assigned a value that is never used.\"\
@@ -375,4 +323,4 @@ cc_xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<results version=\"2\">\n  
   \ project&apos;s include directories and add all of them as include directories\
   \ for Cppcheck. To see what files Cppcheck cannot find use --check-config.\"/>\n\
   \    </errors>\n</results>\n"
-tot_score: -6.572815533980583
+tot_score: -5.601941747572815

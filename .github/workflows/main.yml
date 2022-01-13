@@ -15,6 +15,7 @@ jobs:
           echo sudo apt install libigraph-dev
           echo make
           echo Fails on Ubuntu, so not yet...
+
   quality-estimate:
     name: 'Оценка качества'
     uses: dluciv/cyber-under-tutor/.github/workflows/cut-analyze-report.yml@main

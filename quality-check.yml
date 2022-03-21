@@ -1,11 +1,9 @@
-cc_messages: 34
-cc_report: "examples/02.Types_Formatting_IO/floats.c:6:5: portability: %d in format\
-  \ string (no. 1) requires 'int' but the argument type is 'size_t {aka unsigned long}'.\
-  \ [invalidPrintfArgType_sint]\n    printf(\"%d\\n\", sizeof(eps));\n    ^\nexamples/02.Types_Formatting_IO/integers_booleans.c:11:8:\
-  \ style: Condition 'v1' is always true [knownConditionTrueFalse]\n    if(v1) {\n\
-  \       ^\nexamples/02.Types_Formatting_IO/integers_booleans.c:5:14: note: Assignment\
-  \ 'v1=37', assigned value is 37\n    int v1 = 37, v2 = 43;\n             ^\nexamples/02.Types_Formatting_IO/integers_booleans.c:11:8:\
-  \ note: Condition 'v1' is always true\n    if(v1) {\n       ^\nexamples/02.Types_Formatting_IO/integers_booleans.c:15:8:\
+cc_messages: 33
+cc_report: "examples/02.Types_Formatting_IO/integers_booleans.c:11:8: style: Condition\
+  \ 'v1' is always true [knownConditionTrueFalse]\n    if(v1) {\n       ^\nexamples/02.Types_Formatting_IO/integers_booleans.c:5:14:\
+  \ note: Assignment 'v1=37', assigned value is 37\n    int v1 = 37, v2 = 43;\n  \
+  \           ^\nexamples/02.Types_Formatting_IO/integers_booleans.c:11:8: note: Condition\
+  \ 'v1' is always true\n    if(v1) {\n       ^\nexamples/02.Types_Formatting_IO/integers_booleans.c:15:8:\
   \ style: Condition 'v1' is always true [knownConditionTrueFalse]\n    if(v1 && v2)\
   \ {\n       ^\nexamples/02.Types_Formatting_IO/integers_booleans.c:5:14: note: Assignment\
   \ 'v1=37', assigned value is 37\n    int v1 = 37, v2 = 43;\n             ^\nexamples/02.Types_Formatting_IO/integers_booleans.c:15:8:\
@@ -98,15 +96,9 @@ cc_report: "examples/02.Types_Formatting_IO/floats.c:6:5: portability: %d in for
   \ unsigned long}'. [invalidPrintfArgType_sint]\n    printf(\"%d, %d, %d, %d\\n\"\
   , sizeof(int), sizeof(long), sizeof(float), sizeof(double));\n    ^\nnofile:0:0:\
   \ information: Cppcheck cannot find all the include files (use --check-config for\
-  \ details) [missingIncludeSystem]\n\n"
+  \ details) [missingInclude]\n\n"
 cc_xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<results version=\"2\">\n   \
-  \ <cppcheck version=\"2.6\"/>\n    <errors>\n        <error id=\"invalidPrintfArgType_sint\"\
-  \ severity=\"portability\" msg=\"%d in format string (no. 1) requires &apos;int&apos;\
-  \ but the argument type is &apos;size_t {aka unsigned long}&apos;.\" verbose=\"\
-  %d in format string (no. 1) requires &apos;int&apos; but the argument type is &apos;size_t\
-  \ {aka unsigned long}&apos;.\" cwe=\"686\" file0=\"examples/02.Types_Formatting_IO/floats.c\"\
-  >\n            <location file=\"examples/02.Types_Formatting_IO/floats.c\" line=\"\
-  6\" column=\"5\"/>\n        </error>\n        <error id=\"knownConditionTrueFalse\"\
+  \ <cppcheck version=\"2.6\"/>\n    <errors>\n        <error id=\"knownConditionTrueFalse\"\
   \ severity=\"style\" msg=\"Condition &apos;v1&apos; is always true\" verbose=\"\
   Condition &apos;v1&apos; is always true\" cwe=\"571\" file0=\"examples/02.Types_Formatting_IO/integers_booleans.c\"\
   >\n            <location file=\"examples/02.Types_Formatting_IO/integers_booleans.c\"\
@@ -315,7 +307,7 @@ cc_xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<results version=\"2\">\n  
   %d in format string (no. 4) requires &apos;int&apos; but the argument type is &apos;size_t\
   \ {aka unsigned long}&apos;.\" cwe=\"686\" file0=\"examples/14.Cross_Compiling/ZX_Spectrum/hwe_no_printf.c\"\
   >\n            <location file=\"examples/14.Cross_Compiling/ZX_Spectrum/hwe_no_printf.c\"\
-  \ line=\"37\" column=\"5\"/>\n        </error>\n        <error id=\"missingIncludeSystem\"\
+  \ line=\"37\" column=\"5\"/>\n        </error>\n        <error id=\"missingInclude\"\
   \ severity=\"information\" msg=\"Cppcheck cannot find all the include files (use\
   \ --check-config for details)\" verbose=\"Cppcheck cannot find all the include files.\
   \ Cppcheck can check the code without the include files found. But the results will\
@@ -323,4 +315,4 @@ cc_xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<results version=\"2\">\n  
   \ project&apos;s include directories and add all of them as include directories\
   \ for Cppcheck. To see what files Cppcheck cannot find use --check-config.\"/>\n\
   \    </errors>\n</results>\n"
-tot_score: -5.570048309178744
+tot_score: -5.297709923664122

@@ -1,8 +1,7 @@
-#include <stdio.h>
-#include <math.h>
+//#include <stdio.h>
+//#include <math.h>
 
-// #define NORM2(x, y) sqrt(x * x + y * y)
-#define NORM2(x, y) sqrt((x) 9999028fc9h2h93 (x) + (y) * (y))
+#include "m.h"
 
 int main(void)
 {

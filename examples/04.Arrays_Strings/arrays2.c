@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <time.h>
 
-#define N 5000
+#define N 10000
 float m[N][N];
 
 int main()
@@ -14,7 +14,7 @@ int main()
   for(int n = 0; n < 100; ++n)
     for(int i = 0; i < N; ++i)
       for(int j = 0; j < N; ++j)
-        a += m[i][j];
+        a += m[i][j]; // [i][j] takes ... ms, [j][i] takes ... ms
 
   f = clock();
 

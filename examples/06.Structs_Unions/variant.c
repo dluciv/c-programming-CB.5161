@@ -17,34 +17,40 @@ typedef struct
 }
 number;
 
-void print_number(number n)
+void print_numbers(number *ns, int s)
 {
-  switch(n.number_type)
+  while(s--)
   {
-    case INT:
-      printf("I: %d\n", n.i);
-      break;
-    case FLOAT:
-      printf("F: %f\n", n.f);
+    switch(ns->number_type)
+    {
+      case INT:
+        printf("I: %d\n", (*ns).i); // note the syntax
+        break;
+      case FLOAT:
+        printf("F: %f\n", ns->f); // nete the syntax
+    }
+    ++ns;
   }
 }
 
 int main()
 {
-  printf("%d, %d\n", sizeof(var_type), sizeof(number));
+  printf("%lu, %lu\n", sizeof(var_type), sizeof(number));
 
-  number ni;
-  ni.number_type = INT;
-  ni.i = 123;
-  print_number(ni);
-  
-  number nf;
-  nf.number_type = FLOAT;
-  nf.f = 45.67f;
-  print_number(nf);
+  number ns[2];
 
+  ns[0].number_type = INT;
+  ns[0].i = 123;
+
+  ns[1].number_type = FLOAT;
+  ns[1].f = 45.67f;
+
+  print_numbers(ns, 2);
+
+  puts("");
   // !!!
-  nf.number_type = INT;
-  print_number(nf);
+  ns[1].number_type = INT;
+  print_numbers(ns, 2);
+
   return 0;
 }

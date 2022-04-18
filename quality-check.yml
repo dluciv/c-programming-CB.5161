@@ -44,7 +44,7 @@ cc_report: "examples/02.Types_Formatting_IO/integers_booleans.c:11:8: style: Con
   \  printf(\"%u\\t%u\\n\", p++, p);\n  ^\nexamples/05.Pointers/pointer1.c:8:25: error:\
   \ Expression '\"%u\\t%u\\n\",p++,p' depends on order of evaluation of side effects\
   \ [unknownEvaluationOrder]\n  printf(\"%u\\t%u\\n\", p++, p);\n                \
-  \        ^\nexamples/06.Structs_Unions/floating_fields.c:33:3: warning: %d in format\
+  \        ^\nexamples/06.Structs_Unions/floating_fields.c:44:3: warning: %d in format\
   \ string (no. 3) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]\n\
   \  printf(\"S: %d\\t E: %03u (%03d) \", u.ff.sign, u.ff.exponent, u.ff.exponent\
   \ - 127);\n  ^\nexamples/06.Structs_Unions/struct1.c:21:3: portability: %d in format\
@@ -61,13 +61,13 @@ cc_report: "examples/02.Types_Formatting_IO/integers_booleans.c:11:8: style: Con
   n\", sizeof(point3d), sizeof(point3d *));\n  ^\nexamples/06.Structs_Unions/struct3.c:23:3:\
   \ portability: %d in format string (no. 2) requires 'int' but the argument type\
   \ is 'size_t {aka unsigned long}'. [invalidPrintfArgType_sint]\n  printf(\"%d, %d\\\
-  n\", sizeof(point3d), sizeof(point3d *));\n  ^\nexamples/06.Structs_Unions/variant.c:34:3:\
-  \ portability: %d in format string (no. 1) requires 'int' but the argument type\
-  \ is 'size_t {aka unsigned long}'. [invalidPrintfArgType_sint]\n  printf(\"%d, %d\\\
-  n\", sizeof(var_type), sizeof(number));\n  ^\nexamples/06.Structs_Unions/variant.c:34:3:\
-  \ portability: %d in format string (no. 2) requires 'int' but the argument type\
-  \ is 'size_t {aka unsigned long}'. [invalidPrintfArgType_sint]\n  printf(\"%d, %d\\\
-  n\", sizeof(var_type), sizeof(number));\n  ^\nexamples/13.Faster_Python_C/2.CFFI/pi_approx.c:10:12:\
+  n\", sizeof(point3d), sizeof(point3d *));\n  ^\nexamples/06.Structs_Unions/variant.c:38:3:\
+  \ portability: %lu in format string (no. 1) requires 'unsigned long' but the argument\
+  \ type is 'size_t {aka unsigned long}'. [invalidPrintfArgType_uint]\n  printf(\"\
+  %lu, %lu\\n\", sizeof(var_type), sizeof(number));\n  ^\nexamples/06.Structs_Unions/variant.c:38:3:\
+  \ portability: %lu in format string (no. 2) requires 'unsigned long' but the argument\
+  \ type is 'size_t {aka unsigned long}'. [invalidPrintfArgType_uint]\n  printf(\"\
+  %lu, %lu\\n\", sizeof(var_type), sizeof(number));\n  ^\nexamples/13.Faster_Python_C/2.CFFI/pi_approx.c:10:12:\
   \ style: The scope of the variable 'x' can be reduced. [variableScope]\n  double\
   \ i,x,y,sum=0;\n           ^\nexamples/13.Faster_Python_C/2.CFFI/pi_approx.c:10:14:\
   \ style: The scope of the variable 'y' can be reduced. [variableScope]\n  double\
@@ -208,7 +208,7 @@ cc_xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<results version=\"2\">\n  
   \ type is &apos;unsigned int&apos;.\" verbose=\"%d in format string (no. 3) requires\
   \ &apos;int&apos; but the argument type is &apos;unsigned int&apos;.\" cwe=\"686\"\
   \ file0=\"examples/06.Structs_Unions/floating_fields.c\">\n            <location\
-  \ file=\"examples/06.Structs_Unions/floating_fields.c\" line=\"33\" column=\"3\"\
+  \ file=\"examples/06.Structs_Unions/floating_fields.c\" line=\"44\" column=\"3\"\
   />\n        </error>\n        <error id=\"invalidPrintfArgType_sint\" severity=\"\
   portability\" msg=\"%d in format string (no. 1) requires &apos;int&apos; but the\
   \ argument type is &apos;size_t {aka unsigned long}&apos;.\" verbose=\"%d in format\
@@ -239,32 +239,32 @@ cc_xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<results version=\"2\">\n  
   %d in format string (no. 2) requires &apos;int&apos; but the argument type is &apos;size_t\
   \ {aka unsigned long}&apos;.\" cwe=\"686\" file0=\"examples/06.Structs_Unions/struct3.c\"\
   >\n            <location file=\"examples/06.Structs_Unions/struct3.c\" line=\"23\"\
-  \ column=\"3\"/>\n        </error>\n        <error id=\"invalidPrintfArgType_sint\"\
-  \ severity=\"portability\" msg=\"%d in format string (no. 1) requires &apos;int&apos;\
-  \ but the argument type is &apos;size_t {aka unsigned long}&apos;.\" verbose=\"\
-  %d in format string (no. 1) requires &apos;int&apos; but the argument type is &apos;size_t\
-  \ {aka unsigned long}&apos;.\" cwe=\"686\" file0=\"examples/06.Structs_Unions/variant.c\"\
-  >\n            <location file=\"examples/06.Structs_Unions/variant.c\" line=\"34\"\
-  \ column=\"3\"/>\n        </error>\n        <error id=\"invalidPrintfArgType_sint\"\
-  \ severity=\"portability\" msg=\"%d in format string (no. 2) requires &apos;int&apos;\
-  \ but the argument type is &apos;size_t {aka unsigned long}&apos;.\" verbose=\"\
-  %d in format string (no. 2) requires &apos;int&apos; but the argument type is &apos;size_t\
-  \ {aka unsigned long}&apos;.\" cwe=\"686\" file0=\"examples/06.Structs_Unions/variant.c\"\
-  >\n            <location file=\"examples/06.Structs_Unions/variant.c\" line=\"34\"\
-  \ column=\"3\"/>\n        </error>\n        <error id=\"variableScope\" severity=\"\
-  style\" msg=\"The scope of the variable &apos;x&apos; can be reduced.\" verbose=\"\
-  The scope of the variable &apos;x&apos; can be reduced. Warning: Be careful when\
-  \ fixing this message, especially when there are inner loops. Here is an example\
-  \ where cppcheck will write that the scope for &apos;i&apos; can be reduced:\\012void\
-  \ f(int x)\\012{\\012    int i = 0;\\012    if (x) {\\012        // it&apos;s safe\
-  \ to move &apos;int i = 0;&apos; here\\012        for (int n = 0; n &lt; 10; ++n)\
-  \ {\\012            // it is possible but not safe to move &apos;int i = 0;&apos;\
-  \ here\\012            do_something(&amp;i);\\012        }\\012    }\\012}\\012When\
-  \ you see this message it is always safe to reduce the variable scope 1 level.\"\
-  \ cwe=\"398\" file0=\"examples/13.Faster_Python_C/2.CFFI/pi_approx.c\">\n      \
-  \      <location file=\"examples/13.Faster_Python_C/2.CFFI/pi_approx.c\" line=\"\
-  10\" column=\"12\"/>\n            <symbol>x</symbol>\n        </error>\n       \
-  \ <error id=\"variableScope\" severity=\"style\" msg=\"The scope of the variable\
+  \ column=\"3\"/>\n        </error>\n        <error id=\"invalidPrintfArgType_uint\"\
+  \ severity=\"portability\" msg=\"%lu in format string (no. 1) requires &apos;unsigned\
+  \ long&apos; but the argument type is &apos;size_t {aka unsigned long}&apos;.\"\
+  \ verbose=\"%lu in format string (no. 1) requires &apos;unsigned long&apos; but\
+  \ the argument type is &apos;size_t {aka unsigned long}&apos;.\" cwe=\"686\" file0=\"\
+  examples/06.Structs_Unions/variant.c\">\n            <location file=\"examples/06.Structs_Unions/variant.c\"\
+  \ line=\"38\" column=\"3\"/>\n        </error>\n        <error id=\"invalidPrintfArgType_uint\"\
+  \ severity=\"portability\" msg=\"%lu in format string (no. 2) requires &apos;unsigned\
+  \ long&apos; but the argument type is &apos;size_t {aka unsigned long}&apos;.\"\
+  \ verbose=\"%lu in format string (no. 2) requires &apos;unsigned long&apos; but\
+  \ the argument type is &apos;size_t {aka unsigned long}&apos;.\" cwe=\"686\" file0=\"\
+  examples/06.Structs_Unions/variant.c\">\n            <location file=\"examples/06.Structs_Unions/variant.c\"\
+  \ line=\"38\" column=\"3\"/>\n        </error>\n        <error id=\"variableScope\"\
+  \ severity=\"style\" msg=\"The scope of the variable &apos;x&apos; can be reduced.\"\
+  \ verbose=\"The scope of the variable &apos;x&apos; can be reduced. Warning: Be\
+  \ careful when fixing this message, especially when there are inner loops. Here\
+  \ is an example where cppcheck will write that the scope for &apos;i&apos; can be\
+  \ reduced:\\012void f(int x)\\012{\\012    int i = 0;\\012    if (x) {\\012    \
+  \    // it&apos;s safe to move &apos;int i = 0;&apos; here\\012        for (int\
+  \ n = 0; n &lt; 10; ++n) {\\012            // it is possible but not safe to move\
+  \ &apos;int i = 0;&apos; here\\012            do_something(&amp;i);\\012       \
+  \ }\\012    }\\012}\\012When you see this message it is always safe to reduce the\
+  \ variable scope 1 level.\" cwe=\"398\" file0=\"examples/13.Faster_Python_C/2.CFFI/pi_approx.c\"\
+  >\n            <location file=\"examples/13.Faster_Python_C/2.CFFI/pi_approx.c\"\
+  \ line=\"10\" column=\"12\"/>\n            <symbol>x</symbol>\n        </error>\n\
+  \        <error id=\"variableScope\" severity=\"style\" msg=\"The scope of the variable\
   \ &apos;y&apos; can be reduced.\" verbose=\"The scope of the variable &apos;y&apos;\
   \ can be reduced. Warning: Be careful when fixing this message, especially when\
   \ there are inner loops. Here is an example where cppcheck will write that the scope\
@@ -332,4 +332,4 @@ cc_xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<results version=\"2\">\n  
   \ project&apos;s include directories and add all of them as include directories\
   \ for Cppcheck. To see what files Cppcheck cannot find use --check-config.\"/>\n\
   \    </errors>\n</results>\n"
-tot_score: -5.487488415199259
+tot_score: -5.386861313868613

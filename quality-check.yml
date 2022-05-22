@@ -1,4 +1,4 @@
-cc_messages: 35
+cc_messages: 37
 cc_report: "examples/02.Types_Formatting_IO/integers_booleans.c:11:8: style: Condition\
   \ 'v1' is always true [knownConditionTrueFalse]\n    if(v1) {\n       ^\nexamples/02.Types_Formatting_IO/integers_booleans.c:5:14:\
   \ note: Assignment 'v1=37', assigned value is 37\n    int v1 = 37, v2 = 43;\n  \
@@ -25,46 +25,53 @@ cc_report: "examples/02.Types_Formatting_IO/integers_booleans.c:11:8: style: Con
   \ scanf() without field width limits can crash with huge input data. [invalidscanf]\n\
   \    scanf(\"%[^\\n]s\", name);\n    ^\nexamples/05.Pointers/pointer1.c:7:42: error:\
   \ Array 'a[1000]' accessed at index 5000, which is out of bounds. [arrayIndexOutOfBounds]\n\
-  \  printf(\"%u\\t%u\\t%u\\n\", &a[0], a + 1, &a[5000]);\n                      \
-  \                   ^\nexamples/05.Pointers/pointer1.c:6:3: warning: %u in format\
-  \ string (no. 1) requires 'unsigned int' but the argument type is 'signed int *'.\
-  \ [invalidPrintfArgType_uint]\n  printf(\"%u\\t%u\\n\", &v, a);\n  ^\nexamples/05.Pointers/pointer1.c:6:3:\
-  \ warning: %u in format string (no. 2) requires 'unsigned int' but the argument\
-  \ type is 'int *'. [invalidPrintfArgType_uint]\n  printf(\"%u\\t%u\\n\", &v, a);\n\
-  \  ^\nexamples/05.Pointers/pointer1.c:7:3: warning: %u in format string (no. 1)\
-  \ requires 'unsigned int' but the argument type is 'int *'. [invalidPrintfArgType_uint]\n\
-  \  printf(\"%u\\t%u\\t%u\\n\", &a[0], a + 1, &a[5000]);\n  ^\nexamples/05.Pointers/pointer1.c:7:3:\
-  \ warning: %u in format string (no. 3) requires 'unsigned int' but the argument\
-  \ type is 'signed int *'. [invalidPrintfArgType_uint]\n  printf(\"%u\\t%u\\t%u\\\
-  n\", &a[0], a + 1, &a[5000]);\n  ^\nexamples/05.Pointers/pointer1.c:8:3: warning:\
-  \ %u in format string (no. 1) requires 'unsigned int' but the argument type is 'signed\
-  \ int *'. [invalidPrintfArgType_uint]\n  printf(\"%u\\t%u\\n\", p++, p);\n  ^\n\
-  examples/05.Pointers/pointer1.c:8:3: warning: %u in format string (no. 2) requires\
-  \ 'unsigned int' but the argument type is 'signed int *'. [invalidPrintfArgType_uint]\n\
-  \  printf(\"%u\\t%u\\n\", p++, p);\n  ^\nexamples/05.Pointers/pointer1.c:8:25: error:\
-  \ Expression '\"%u\\t%u\\n\",p++,p' depends on order of evaluation of side effects\
-  \ [unknownEvaluationOrder]\n  printf(\"%u\\t%u\\n\", p++, p);\n                \
-  \        ^\nexamples/06.Structs_Unions/floating_fields.c:44:3: warning: %d in format\
-  \ string (no. 3) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]\n\
-  \  printf(\"S: %d\\t E: %03u (%03d) \", u.ff.sign, u.ff.exponent, u.ff.exponent\
-  \ - 127);\n  ^\nexamples/06.Structs_Unions/struct1.c:21:3: portability: %d in format\
-  \ string (no. 1) requires 'int' but the argument type is 'size_t {aka unsigned long}'.\
-  \ [invalidPrintfArgType_sint]\n  printf(\"%d\\n\", sizeof(point2d));\n  ^\nexamples/06.Structs_Unions/struct2.c:23:3:\
+  \  printf(\"%p\\t%p\\t%p\\n\", &a[0], a + 1, &a[5000]);\n                      \
+  \                   ^\nexamples/05.Pointers/pointer1.c:11:3: warning: %d in format\
+  \ string (no. 1) requires 'int' but the argument type is 'double'. [invalidPrintfArgType_sint]\n\
+  \  printf(\"%d\\t%d\\t%d\\t%d\\n\", *p1, *(p1 + 1), p1[0], p1[1]);\n  ^\nexamples/05.Pointers/pointer1.c:11:3:\
+  \ warning: %d in format string (no. 2) requires 'int' but the argument type is 'double'.\
+  \ [invalidPrintfArgType_sint]\n  printf(\"%d\\t%d\\t%d\\t%d\\n\", *p1, *(p1 + 1),\
+  \ p1[0], p1[1]);\n  ^\nexamples/05.Pointers/pointer1.c:11:3: warning: %d in format\
+  \ string (no. 3) requires 'int' but the argument type is 'double'. [invalidPrintfArgType_sint]\n\
+  \  printf(\"%d\\t%d\\t%d\\t%d\\n\", *p1, *(p1 + 1), p1[0], p1[1]);\n  ^\nexamples/05.Pointers/pointer1.c:11:3:\
+  \ warning: %d in format string (no. 4) requires 'int' but the argument type is 'double'.\
+  \ [invalidPrintfArgType_sint]\n  printf(\"%d\\t%d\\t%d\\t%d\\n\", *p1, *(p1 + 1),\
+  \ p1[0], p1[1]);\n  ^\nexamples/05.Pointers/pointer1.c:14:3: portability: %d in\
+  \ format string (no. 1) requires 'int' but the argument type is 'size_t {aka unsigned\
+  \ long}'. [invalidPrintfArgType_sint]\n  printf(\"%d, %p, %p\\n\", sizeof(*vp),\
+  \ vp, vp + 1);\n  ^\nexamples/05.Pointers/pointer1.c:8:25: error: Expression '\"\
+  %p\\t%p\\n\",p++,p' depends on order of evaluation of side effects [unknownEvaluationOrder]\n\
+  \  printf(\"%p\\t%p\\n\", p++, p);\n                        ^\nexamples/05.Pointers/pointer1.c:14:26:\
+  \ portability: '*vp' is of type 'void', the behaviour of 'sizeof(void)' is not covered\
+  \ by the ISO C standard. [sizeofDereferencedVoidPointer]\n  printf(\"%d, %p, %p\\\
+  n\", sizeof(*vp), vp, vp + 1);\n                         ^\nexamples/05.Pointers/pointer1.c:14:46:\
+  \ portability: 'vp' is of type 'void *'. When using void pointers in calculations,\
+  \ the behaviour is undefined. [arithOperationsOnVoidPointer]\n  printf(\"%d, %p,\
+  \ %p\\n\", sizeof(*vp), vp, vp + 1);\n                                         \
+  \    ^\nexamples/05.Pointers/pointer1.c:15:30: portability: 'vp' is of type 'void\
+  \ *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]\n\
+  \  printf(\"%d\\n\", *(int *)(vp + 1));\n                             ^\nexamples/06.Structs_Unions/floating_fields.c:44:3:\
+  \ warning: %d in format string (no. 3) requires 'int' but the argument type is 'unsigned\
+  \ int'. [invalidPrintfArgType_sint]\n  printf(\"S: %d\\t E: %03u (%03d) \", u.ff.sign,\
+  \ u.ff.exponent, u.ff.exponent - 127);\n  ^\nexamples/06.Structs_Unions/struct1.c:21:3:\
   \ portability: %d in format string (no. 1) requires 'int' but the argument type\
-  \ is 'size_t {aka unsigned long}'. [invalidPrintfArgType_sint]\n  printf(\"%d, %d\\\
-  n\", sizeof(point3d), sizeof(point3d *));\n  ^\nexamples/06.Structs_Unions/struct2.c:23:3:\
-  \ portability: %d in format string (no. 2) requires 'int' but the argument type\
-  \ is 'size_t {aka unsigned long}'. [invalidPrintfArgType_sint]\n  printf(\"%d, %d\\\
-  n\", sizeof(point3d), sizeof(point3d *));\n  ^\nexamples/06.Structs_Unions/struct3.c:23:3:\
-  \ portability: %d in format string (no. 1) requires 'int' but the argument type\
-  \ is 'size_t {aka unsigned long}'. [invalidPrintfArgType_sint]\n  printf(\"%d, %d\\\
-  n\", sizeof(point3d), sizeof(point3d *));\n  ^\nexamples/06.Structs_Unions/struct3.c:23:3:\
-  \ portability: %d in format string (no. 2) requires 'int' but the argument type\
-  \ is 'size_t {aka unsigned long}'. [invalidPrintfArgType_sint]\n  printf(\"%d, %d\\\
-  n\", sizeof(point3d), sizeof(point3d *));\n  ^\nexamples/06.Structs_Unions/variant.c:38:3:\
-  \ portability: %lu in format string (no. 1) requires 'unsigned long' but the argument\
-  \ type is 'size_t {aka unsigned long}'. [invalidPrintfArgType_uint]\n  printf(\"\
-  %lu, %lu\\n\", sizeof(var_type), sizeof(number));\n  ^\nexamples/06.Structs_Unions/variant.c:38:3:\
+  \ is 'size_t {aka unsigned long}'. [invalidPrintfArgType_sint]\n  printf(\"%d\\\
+  n\", sizeof(point2d));\n  ^\nexamples/06.Structs_Unions/struct2.c:23:3: portability:\
+  \ %d in format string (no. 1) requires 'int' but the argument type is 'size_t {aka\
+  \ unsigned long}'. [invalidPrintfArgType_sint]\n  printf(\"%d, %d\\n\", sizeof(point3d),\
+  \ sizeof(point3d *));\n  ^\nexamples/06.Structs_Unions/struct2.c:23:3: portability:\
+  \ %d in format string (no. 2) requires 'int' but the argument type is 'size_t {aka\
+  \ unsigned long}'. [invalidPrintfArgType_sint]\n  printf(\"%d, %d\\n\", sizeof(point3d),\
+  \ sizeof(point3d *));\n  ^\nexamples/06.Structs_Unions/struct3.c:23:3: portability:\
+  \ %d in format string (no. 1) requires 'int' but the argument type is 'size_t {aka\
+  \ unsigned long}'. [invalidPrintfArgType_sint]\n  printf(\"%d, %d\\n\", sizeof(point3d),\
+  \ sizeof(point3d *));\n  ^\nexamples/06.Structs_Unions/struct3.c:23:3: portability:\
+  \ %d in format string (no. 2) requires 'int' but the argument type is 'size_t {aka\
+  \ unsigned long}'. [invalidPrintfArgType_sint]\n  printf(\"%d, %d\\n\", sizeof(point3d),\
+  \ sizeof(point3d *));\n  ^\nexamples/06.Structs_Unions/variant.c:38:3: portability:\
+  \ %lu in format string (no. 1) requires 'unsigned long' but the argument type is\
+  \ 'size_t {aka unsigned long}'. [invalidPrintfArgType_uint]\n  printf(\"%lu, %lu\\\
+  n\", sizeof(var_type), sizeof(number));\n  ^\nexamples/06.Structs_Unions/variant.c:38:3:\
   \ portability: %lu in format string (no. 2) requires 'unsigned long' but the argument\
   \ type is 'size_t {aka unsigned long}'. [invalidPrintfArgType_uint]\n  printf(\"\
   %lu, %lu\\n\", sizeof(var_type), sizeof(number));\n  ^\nexamples/13.Faster_Python_C/2.CFFI/pi_approx.c:10:12:\
@@ -164,55 +171,70 @@ cc_xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<results version=\"2\">\n  
   \ which is out of bounds.\" cwe=\"788\" file0=\"examples/05.Pointers/pointer1.c\"\
   >\n            <location file=\"examples/05.Pointers/pointer1.c\" line=\"7\" column=\"\
   42\" info=\"Array index out of bounds\"/>\n        </error>\n        <error id=\"\
-  invalidPrintfArgType_uint\" severity=\"warning\" msg=\"%u in format string (no.\
-  \ 1) requires &apos;unsigned int&apos; but the argument type is &apos;signed int\
-  \ *&apos;.\" verbose=\"%u in format string (no. 1) requires &apos;unsigned int&apos;\
-  \ but the argument type is &apos;signed int *&apos;.\" cwe=\"686\" file0=\"examples/05.Pointers/pointer1.c\"\
-  >\n            <location file=\"examples/05.Pointers/pointer1.c\" line=\"6\" column=\"\
-  3\"/>\n        </error>\n        <error id=\"invalidPrintfArgType_uint\" severity=\"\
-  warning\" msg=\"%u in format string (no. 2) requires &apos;unsigned int&apos; but\
-  \ the argument type is &apos;int *&apos;.\" verbose=\"%u in format string (no. 2)\
-  \ requires &apos;unsigned int&apos; but the argument type is &apos;int *&apos;.\"\
+  invalidPrintfArgType_sint\" severity=\"warning\" msg=\"%d in format string (no.\
+  \ 1) requires &apos;int&apos; but the argument type is &apos;double&apos;.\" verbose=\"\
+  %d in format string (no. 1) requires &apos;int&apos; but the argument type is &apos;double&apos;.\"\
   \ cwe=\"686\" file0=\"examples/05.Pointers/pointer1.c\">\n            <location\
-  \ file=\"examples/05.Pointers/pointer1.c\" line=\"6\" column=\"3\"/>\n        </error>\n\
-  \        <error id=\"invalidPrintfArgType_uint\" severity=\"warning\" msg=\"%u in\
-  \ format string (no. 1) requires &apos;unsigned int&apos; but the argument type\
-  \ is &apos;int *&apos;.\" verbose=\"%u in format string (no. 1) requires &apos;unsigned\
-  \ int&apos; but the argument type is &apos;int *&apos;.\" cwe=\"686\" file0=\"examples/05.Pointers/pointer1.c\"\
-  >\n            <location file=\"examples/05.Pointers/pointer1.c\" line=\"7\" column=\"\
-  3\"/>\n        </error>\n        <error id=\"invalidPrintfArgType_uint\" severity=\"\
-  warning\" msg=\"%u in format string (no. 3) requires &apos;unsigned int&apos; but\
-  \ the argument type is &apos;signed int *&apos;.\" verbose=\"%u in format string\
-  \ (no. 3) requires &apos;unsigned int&apos; but the argument type is &apos;signed\
-  \ int *&apos;.\" cwe=\"686\" file0=\"examples/05.Pointers/pointer1.c\">\n      \
-  \      <location file=\"examples/05.Pointers/pointer1.c\" line=\"7\" column=\"3\"\
-  />\n        </error>\n        <error id=\"invalidPrintfArgType_uint\" severity=\"\
-  warning\" msg=\"%u in format string (no. 1) requires &apos;unsigned int&apos; but\
-  \ the argument type is &apos;signed int *&apos;.\" verbose=\"%u in format string\
-  \ (no. 1) requires &apos;unsigned int&apos; but the argument type is &apos;signed\
-  \ int *&apos;.\" cwe=\"686\" file0=\"examples/05.Pointers/pointer1.c\">\n      \
-  \      <location file=\"examples/05.Pointers/pointer1.c\" line=\"8\" column=\"3\"\
-  />\n        </error>\n        <error id=\"invalidPrintfArgType_uint\" severity=\"\
-  warning\" msg=\"%u in format string (no. 2) requires &apos;unsigned int&apos; but\
-  \ the argument type is &apos;signed int *&apos;.\" verbose=\"%u in format string\
-  \ (no. 2) requires &apos;unsigned int&apos; but the argument type is &apos;signed\
-  \ int *&apos;.\" cwe=\"686\" file0=\"examples/05.Pointers/pointer1.c\">\n      \
-  \      <location file=\"examples/05.Pointers/pointer1.c\" line=\"8\" column=\"3\"\
-  />\n        </error>\n        <error id=\"unknownEvaluationOrder\" severity=\"error\"\
-  \ msg=\"Expression &apos;&quot;%u\\t%u\\n&quot;,p++,p&apos; depends on order of\
-  \ evaluation of side effects\" verbose=\"Expression &apos;&quot;%u\\t%u\\n&quot;,p++,p&apos;\
-  \ depends on order of evaluation of side effects\" cwe=\"768\" file0=\"examples/05.Pointers/pointer1.c\"\
-  >\n            <location file=\"examples/05.Pointers/pointer1.c\" line=\"8\" column=\"\
-  25\"/>\n        </error>\n        <error id=\"invalidPrintfArgType_sint\" severity=\"\
+  \ file=\"examples/05.Pointers/pointer1.c\" line=\"11\" column=\"3\"/>\n        </error>\n\
+  \        <error id=\"invalidPrintfArgType_sint\" severity=\"warning\" msg=\"%d in\
+  \ format string (no. 2) requires &apos;int&apos; but the argument type is &apos;double&apos;.\"\
+  \ verbose=\"%d in format string (no. 2) requires &apos;int&apos; but the argument\
+  \ type is &apos;double&apos;.\" cwe=\"686\" file0=\"examples/05.Pointers/pointer1.c\"\
+  >\n            <location file=\"examples/05.Pointers/pointer1.c\" line=\"11\" column=\"\
+  3\"/>\n        </error>\n        <error id=\"invalidPrintfArgType_sint\" severity=\"\
   warning\" msg=\"%d in format string (no. 3) requires &apos;int&apos; but the argument\
-  \ type is &apos;unsigned int&apos;.\" verbose=\"%d in format string (no. 3) requires\
-  \ &apos;int&apos; but the argument type is &apos;unsigned int&apos;.\" cwe=\"686\"\
-  \ file0=\"examples/06.Structs_Unions/floating_fields.c\">\n            <location\
-  \ file=\"examples/06.Structs_Unions/floating_fields.c\" line=\"44\" column=\"3\"\
-  />\n        </error>\n        <error id=\"invalidPrintfArgType_sint\" severity=\"\
+  \ type is &apos;double&apos;.\" verbose=\"%d in format string (no. 3) requires &apos;int&apos;\
+  \ but the argument type is &apos;double&apos;.\" cwe=\"686\" file0=\"examples/05.Pointers/pointer1.c\"\
+  >\n            <location file=\"examples/05.Pointers/pointer1.c\" line=\"11\" column=\"\
+  3\"/>\n        </error>\n        <error id=\"invalidPrintfArgType_sint\" severity=\"\
+  warning\" msg=\"%d in format string (no. 4) requires &apos;int&apos; but the argument\
+  \ type is &apos;double&apos;.\" verbose=\"%d in format string (no. 4) requires &apos;int&apos;\
+  \ but the argument type is &apos;double&apos;.\" cwe=\"686\" file0=\"examples/05.Pointers/pointer1.c\"\
+  >\n            <location file=\"examples/05.Pointers/pointer1.c\" line=\"11\" column=\"\
+  3\"/>\n        </error>\n        <error id=\"invalidPrintfArgType_sint\" severity=\"\
   portability\" msg=\"%d in format string (no. 1) requires &apos;int&apos; but the\
   \ argument type is &apos;size_t {aka unsigned long}&apos;.\" verbose=\"%d in format\
   \ string (no. 1) requires &apos;int&apos; but the argument type is &apos;size_t\
+  \ {aka unsigned long}&apos;.\" cwe=\"686\" file0=\"examples/05.Pointers/pointer1.c\"\
+  >\n            <location file=\"examples/05.Pointers/pointer1.c\" line=\"14\" column=\"\
+  3\"/>\n        </error>\n        <error id=\"unknownEvaluationOrder\" severity=\"\
+  error\" msg=\"Expression &apos;&quot;%p\\t%p\\n&quot;,p++,p&apos; depends on order\
+  \ of evaluation of side effects\" verbose=\"Expression &apos;&quot;%p\\t%p\\n&quot;,p++,p&apos;\
+  \ depends on order of evaluation of side effects\" cwe=\"768\" file0=\"examples/05.Pointers/pointer1.c\"\
+  >\n            <location file=\"examples/05.Pointers/pointer1.c\" line=\"8\" column=\"\
+  25\"/>\n        </error>\n        <error id=\"sizeofDereferencedVoidPointer\" severity=\"\
+  portability\" msg=\"&apos;*vp&apos; is of type &apos;void&apos;, the behaviour of\
+  \ &apos;sizeof(void)&apos; is not covered by the ISO C standard.\" verbose=\"&apos;*vp&apos;\
+  \ is of type &apos;void&apos;, the behaviour of &apos;sizeof(void)&apos; is not\
+  \ covered by the ISO C standard. A value for &apos;sizeof(void)&apos; is defined\
+  \ only as part of a GNU C extension, which defines &apos;sizeof(void)&apos; to be\
+  \ 1.\" cwe=\"682\" file0=\"examples/05.Pointers/pointer1.c\">\n            <location\
+  \ file=\"examples/05.Pointers/pointer1.c\" line=\"14\" column=\"26\"/>\n       \
+  \ </error>\n        <error id=\"arithOperationsOnVoidPointer\" severity=\"portability\"\
+  \ msg=\"&apos;vp&apos; is of type &apos;void *&apos;. When using void pointers in\
+  \ calculations, the behaviour is undefined.\" verbose=\"&apos;vp&apos; is of type\
+  \ &apos;void *&apos;. When using void pointers in calculations, the behaviour is\
+  \ undefined. Arithmetic operations on &apos;void *&apos; is a GNU C extension, which\
+  \ defines the &apos;sizeof(void)&apos; to be 1.\" cwe=\"467\" file0=\"examples/05.Pointers/pointer1.c\"\
+  >\n            <location file=\"examples/05.Pointers/pointer1.c\" line=\"14\" column=\"\
+  46\"/>\n            <symbol>vp</symbol>\n        </error>\n        <error id=\"\
+  arithOperationsOnVoidPointer\" severity=\"portability\" msg=\"&apos;vp&apos; is\
+  \ of type &apos;void *&apos;. When using void pointers in calculations, the behaviour\
+  \ is undefined.\" verbose=\"&apos;vp&apos; is of type &apos;void *&apos;. When using\
+  \ void pointers in calculations, the behaviour is undefined. Arithmetic operations\
+  \ on &apos;void *&apos; is a GNU C extension, which defines the &apos;sizeof(void)&apos;\
+  \ to be 1.\" cwe=\"467\" file0=\"examples/05.Pointers/pointer1.c\">\n          \
+  \  <location file=\"examples/05.Pointers/pointer1.c\" line=\"15\" column=\"30\"\
+  />\n            <symbol>vp</symbol>\n        </error>\n        <error id=\"invalidPrintfArgType_sint\"\
+  \ severity=\"warning\" msg=\"%d in format string (no. 3) requires &apos;int&apos;\
+  \ but the argument type is &apos;unsigned int&apos;.\" verbose=\"%d in format string\
+  \ (no. 3) requires &apos;int&apos; but the argument type is &apos;unsigned int&apos;.\"\
+  \ cwe=\"686\" file0=\"examples/06.Structs_Unions/floating_fields.c\">\n        \
+  \    <location file=\"examples/06.Structs_Unions/floating_fields.c\" line=\"44\"\
+  \ column=\"3\"/>\n        </error>\n        <error id=\"invalidPrintfArgType_sint\"\
+  \ severity=\"portability\" msg=\"%d in format string (no. 1) requires &apos;int&apos;\
+  \ but the argument type is &apos;size_t {aka unsigned long}&apos;.\" verbose=\"\
+  %d in format string (no. 1) requires &apos;int&apos; but the argument type is &apos;size_t\
   \ {aka unsigned long}&apos;.\" cwe=\"686\" file0=\"examples/06.Structs_Unions/struct1.c\"\
   >\n            <location file=\"examples/06.Structs_Unions/struct1.c\" line=\"21\"\
   \ column=\"3\"/>\n        </error>\n        <error id=\"invalidPrintfArgType_sint\"\
@@ -332,4 +354,4 @@ cc_xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<results version=\"2\">\n  
   \ project&apos;s include directories and add all of them as include directories\
   \ for Cppcheck. To see what files Cppcheck cannot find use --check-config.\"/>\n\
   \    </errors>\n</results>\n"
-tot_score: -5.092254134029591
+tot_score: -5.187290969899665

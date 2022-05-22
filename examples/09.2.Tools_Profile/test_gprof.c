@@ -1,43 +1,38 @@
 #include<stdio.h>
 
-void new_func1(void)
+#define REP 1000
+#define ZXN 1000000
+
+// https://en.wikipedia.org/wiki/Linear_congruential_generator#Parameters_in_common_use
+int zx81n(int seed, int n)
 {
-    printf("\n Inside new_func1()\n");
-    int i = 0;
+    const int
+        a = 75,
+        c = 74,
+        m = (1 << 16) + 1;
 
-    for(;i<0xffffffee;i++);
+    for(int i = 0; i<n; i++)
+        seed = (a * seed + c) % m;
 
-    return;
+    return seed;
 }
 
-void func1(void)
+int f1(void)
 {
-    printf("\n Inside func1 \n");
-    int i = 0;
-
-    for(;i<0xffffffff;i++);
-    new_func1();
-
-    return;
-}
-
-static void func2(void)
-{
-    printf("\n Inside func2 \n");
-    int i = 0;
-
-    for(;i<0xffffffaa;i++);
-    return;
+    int s = 0;
+    for(int i = 0; i<REP; i++)
+        s += zx81n(123, ZXN);
+    return s;
 }
 
 int main(void)
 {
-    printf("\n Inside main()\n");
-    int i = 0;
+    int s = f1();
 
-    for(;i<0xffffff;i++);
-    func1();
-    func2();
+    for(int i = 0; i<REP; i++)
+        s += zx81n(123, ZXN);
+
+    printf("%d\n", s);
 
     return 0;
 }

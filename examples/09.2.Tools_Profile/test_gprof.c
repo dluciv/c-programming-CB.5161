@@ -3,7 +3,6 @@
 #define REP 100
 #define ZXN 5000000
 
-// https://en.wikipedia.org/wiki/Linear_congruential_generator#Parameters_in_common_use
 int zx81n(int seed, int n)
 {
     const int

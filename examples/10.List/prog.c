@@ -9,6 +9,8 @@ int main()
     l = l_prepend(l, 3);
     l = l_prepend(l, 2);
     l = l_prepend(l, 1);
+    l = l_append(l, 6);
+    l = l_append(l, 7);
     l_print(l);
 
     l = l_remove(l, 0);

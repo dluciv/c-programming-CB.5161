@@ -10,6 +10,20 @@ List l_prepend(List l, int v)
     return h;
 }
 
+List l_append(List l, int v)
+{
+    if(!l)
+        return l_prepend(l, v);
+    else
+    {
+        List c = l;
+        while(c->next)
+            c = c->next;
+        c->next = l_prepend(EMPTY_LIST, v);
+        return l;
+    }
+}
+
 List l_remove(List l, int ind)
 {
     if(!ind)
@@ -24,7 +38,7 @@ List l_remove(List l, int ind)
         while(--ind)
             c = c->next;
         List d = c->next;
-        c->next = c->next->next;
+        c->next = d->next;
         free(d);
         return l;
     }

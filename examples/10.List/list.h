@@ -24,7 +24,7 @@ void l_print(List list);
 List l_append(List list, int value);
 
 // Insert element to the list at the given position
-List l_insert_to(List list, int position, int value);
+List l_insert_to(List list, int index, int value);
 
 // Insert element into the sorted list to keep sorting
 List l_insert_keep_sorting(List list, int value);

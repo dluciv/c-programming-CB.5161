@@ -2,12 +2,12 @@
 
 typedef union
 {
+  float f;
   struct {
     unsigned fractional: 23;
     unsigned exponent  : 8;
     int      sign      : 1;
   } ff;
-  float f;
 } fu;
 
 void print_bits(unsigned v, int width)
@@ -39,8 +39,7 @@ void print_bits(unsigned v, int width)
 
 void println_float_fields(float f)
 {
-  fu u;
-  u.f = f;
+  fu u = { f }; // Initialize uniion by assigning its first member
   printf("S: %d\t E: %03u (%03d) ", u.ff.sign, u.ff.exponent, u.ff.exponent - 127);
   print_bits(u.ff.fractional, 23);
   printf(" <----- %f\n", u.f);

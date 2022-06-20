@@ -52,7 +52,7 @@ cc_report: "examples/02.Types_Formatting_IO/integers_booleans.c:11:8: style: Con
   \ *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]\n\
   \  printf(\"%d\\n\", *(int *)(vp + 1));\n                             ^\nexamples/05.Pointers/pointer1.c:6:22:\
   \ error: Uninitialized variable: &v [uninitvar]\n  printf(\"%p\\t%p\\n\", &v, a);\n\
-  \                     ^\nexamples/06.Structs_Unions/floating_fields.c:44:3: warning:\
+  \                     ^\nexamples/06.Structs_Unions/floating_fields.c:43:3: warning:\
   \ %d in format string (no. 3) requires 'int' but the argument type is 'unsigned\
   \ int'. [invalidPrintfArgType_sint]\n  printf(\"S: %d\\t E: %03u (%03d) \", u.ff.sign,\
   \ u.ff.exponent, u.ff.exponent - 127);\n  ^\nexamples/06.Structs_Unions/struct1.c:21:3:\
@@ -242,7 +242,7 @@ cc_xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<results version=\"2\">\n  
   \ verbose=\"%d in format string (no. 3) requires &apos;int&apos; but the argument\
   \ type is &apos;unsigned int&apos;.\" cwe=\"686\" file0=\"examples/06.Structs_Unions/floating_fields.c\"\
   >\n            <location file=\"examples/06.Structs_Unions/floating_fields.c\" line=\"\
-  44\" column=\"3\"/>\n        </error>\n        <error id=\"invalidPrintfArgType_sint\"\
+  43\" column=\"3\"/>\n        </error>\n        <error id=\"invalidPrintfArgType_sint\"\
   \ severity=\"portability\" msg=\"%d in format string (no. 1) requires &apos;int&apos;\
   \ but the argument type is &apos;size_t {aka unsigned long}&apos;.\" verbose=\"\
   %d in format string (no. 1) requires &apos;int&apos; but the argument type is &apos;size_t\
@@ -376,4 +376,4 @@ cc_xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<results version=\"2\">\n  
   \ files are found. Please check your project&apos;s include directories and add\
   \ all of them as include directories for Cppcheck. To see what files Cppcheck cannot\
   \ find use --check-config.\"/>\n    </errors>\n</results>\n"
-tot_score: -5.633499170812604
+tot_score: -5.639004149377594

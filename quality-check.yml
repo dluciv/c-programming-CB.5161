@@ -1,21 +1,21 @@
 cc_messages: 41
-cc_report: "examples/02.Types_Formatting_IO/integers_booleans.c:11:8: style: Condition\
+cc_report: "examples/02.Types_Formatting_IO/integers_booleans.c:15:8: style: Condition\
   \ 'v1' is always true [knownConditionTrueFalse]\n    if(v1) {\n       ^\nexamples/02.Types_Formatting_IO/integers_booleans.c:5:14:\
   \ note: Assignment 'v1=37', assigned value is 37\n    int v1 = 37, v2 = 43;\n  \
-  \           ^\nexamples/02.Types_Formatting_IO/integers_booleans.c:11:8: note: Condition\
-  \ 'v1' is always true\n    if(v1) {\n       ^\nexamples/02.Types_Formatting_IO/integers_booleans.c:15:8:\
+  \           ^\nexamples/02.Types_Formatting_IO/integers_booleans.c:15:8: note: Condition\
+  \ 'v1' is always true\n    if(v1) {\n       ^\nexamples/02.Types_Formatting_IO/integers_booleans.c:19:8:\
   \ style: Condition 'v1' is always true [knownConditionTrueFalse]\n    if(v1 && v2)\
   \ {\n       ^\nexamples/02.Types_Formatting_IO/integers_booleans.c:5:14: note: Assignment\
-  \ 'v1=37', assigned value is 37\n    int v1 = 37, v2 = 43;\n             ^\nexamples/02.Types_Formatting_IO/integers_booleans.c:15:8:\
-  \ note: Condition 'v1' is always true\n    if(v1 && v2) {\n       ^\nexamples/02.Types_Formatting_IO/integers_booleans.c:15:14:\
+  \ 'v1=37', assigned value is 37\n    int v1 = 37, v2 = 43;\n             ^\nexamples/02.Types_Formatting_IO/integers_booleans.c:19:8:\
+  \ note: Condition 'v1' is always true\n    if(v1 && v2) {\n       ^\nexamples/02.Types_Formatting_IO/integers_booleans.c:19:14:\
   \ style: Condition 'v2' is always true [knownConditionTrueFalse]\n    if(v1 && v2)\
   \ {\n             ^\nexamples/02.Types_Formatting_IO/integers_booleans.c:5:23: note:\
   \ Assignment 'v2=43', assigned value is 43\n    int v1 = 37, v2 = 43;\n        \
-  \              ^\nexamples/02.Types_Formatting_IO/integers_booleans.c:15:14: note:\
-  \ Condition 'v2' is always true\n    if(v1 && v2) {\n             ^\nexamples/02.Types_Formatting_IO/integers_booleans.c:9:5:\
+  \              ^\nexamples/02.Types_Formatting_IO/integers_booleans.c:19:14: note:\
+  \ Condition 'v2' is always true\n    if(v1 && v2) {\n             ^\nexamples/02.Types_Formatting_IO/integers_booleans.c:13:5:\
   \ warning: %u in format string (no. 1) requires 'unsigned int' but the argument\
-  \ type is 'signed int'. [invalidPrintfArgType_uint]\n    printf(\"%u, %d\\n\", -1,\
-  \ -1);\n    ^\nexamples/03.Macros/macro2.c:7:9: style: Variable 'x' is assigned\
+  \ type is 'signed int'. [invalidPrintfArgType_uint]\n    printf(\"2. %u, %d\\n\"\
+  , -1, -1);\n    ^\nexamples/03.Macros/macro2.c:7:9: style: Variable 'x' is assigned\
   \ a value that is never used. [unreadVariable]\n  int x = 45;\n        ^\nexamples/04.Arrays_Strings/arrays1.5.c:10:8:\
   \ error: Invalid puts() argument nr 1. A nul-terminated string is required. [invalidFunctionArgStr]\n\
   \  puts(a0);\n       ^\nexamples/04.Arrays_Strings/arrays4.c:25:3: portability:\
@@ -123,21 +123,21 @@ cc_xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<results version=\"2\">\n  
   \ severity=\"style\" msg=\"Condition &apos;v1&apos; is always true\" verbose=\"\
   Condition &apos;v1&apos; is always true\" cwe=\"571\" file0=\"examples/02.Types_Formatting_IO/integers_booleans.c\"\
   >\n            <location file=\"examples/02.Types_Formatting_IO/integers_booleans.c\"\
-  \ line=\"11\" column=\"8\" info=\"Condition &apos;v1&apos; is always true\"/>\n\
+  \ line=\"15\" column=\"8\" info=\"Condition &apos;v1&apos; is always true\"/>\n\
   \            <location file=\"examples/02.Types_Formatting_IO/integers_booleans.c\"\
   \ line=\"5\" column=\"14\" info=\"Assignment &apos;v1=37&apos;, assigned value is\
   \ 37\"/>\n        </error>\n        <error id=\"knownConditionTrueFalse\" severity=\"\
   style\" msg=\"Condition &apos;v1&apos; is always true\" verbose=\"Condition &apos;v1&apos;\
   \ is always true\" cwe=\"571\" file0=\"examples/02.Types_Formatting_IO/integers_booleans.c\"\
   >\n            <location file=\"examples/02.Types_Formatting_IO/integers_booleans.c\"\
-  \ line=\"15\" column=\"8\" info=\"Condition &apos;v1&apos; is always true\"/>\n\
+  \ line=\"19\" column=\"8\" info=\"Condition &apos;v1&apos; is always true\"/>\n\
   \            <location file=\"examples/02.Types_Formatting_IO/integers_booleans.c\"\
   \ line=\"5\" column=\"14\" info=\"Assignment &apos;v1=37&apos;, assigned value is\
   \ 37\"/>\n        </error>\n        <error id=\"knownConditionTrueFalse\" severity=\"\
   style\" msg=\"Condition &apos;v2&apos; is always true\" verbose=\"Condition &apos;v2&apos;\
   \ is always true\" cwe=\"571\" file0=\"examples/02.Types_Formatting_IO/integers_booleans.c\"\
   >\n            <location file=\"examples/02.Types_Formatting_IO/integers_booleans.c\"\
-  \ line=\"15\" column=\"14\" info=\"Condition &apos;v2&apos; is always true\"/>\n\
+  \ line=\"19\" column=\"14\" info=\"Condition &apos;v2&apos; is always true\"/>\n\
   \            <location file=\"examples/02.Types_Formatting_IO/integers_booleans.c\"\
   \ line=\"5\" column=\"23\" info=\"Assignment &apos;v2=43&apos;, assigned value is\
   \ 43\"/>\n        </error>\n        <error id=\"invalidPrintfArgType_uint\" severity=\"\
@@ -146,7 +146,7 @@ cc_xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<results version=\"2\">\n  
   \ 1) requires &apos;unsigned int&apos; but the argument type is &apos;signed int&apos;.\"\
   \ cwe=\"686\" file0=\"examples/02.Types_Formatting_IO/integers_booleans.c\">\n \
   \           <location file=\"examples/02.Types_Formatting_IO/integers_booleans.c\"\
-  \ line=\"9\" column=\"5\"/>\n        </error>\n        <error id=\"unreadVariable\"\
+  \ line=\"13\" column=\"5\"/>\n        </error>\n        <error id=\"unreadVariable\"\
   \ severity=\"style\" msg=\"Variable &apos;x&apos; is assigned a value that is never\
   \ used.\" verbose=\"Variable &apos;x&apos; is assigned a value that is never used.\"\
   \ cwe=\"563\" file0=\"examples/03.Macros/macro2.c\">\n            <location file=\"\
@@ -383,4 +383,4 @@ cc_xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<results version=\"2\">\n  
   \ files are found. Please check your project&apos;s include directories and add\
   \ all of them as include directories for Cppcheck. To see what files Cppcheck cannot\
   \ find use --check-config.\"/>\n    </errors>\n</results>\n"
-tot_score: -5.804979253112033
+tot_score: -5.666666666666667

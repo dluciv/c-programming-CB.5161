@@ -20,7 +20,8 @@ int main()
             puts("Ok!");
             break;
         default:
-            puts("WAT?!");
+            // puts("WAT?!");
+            printf("WAT?! You answered: '%c'\n", inp);
         }
     }
 

@@ -2,7 +2,7 @@
 
 int main()
 {
-    for(int c = 0; c < 10; ++c)
+    for(int c = 0; c < 16; ++c)
     {
         switch(c)
         {

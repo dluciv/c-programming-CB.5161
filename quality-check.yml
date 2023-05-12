@@ -119,7 +119,7 @@ cc_report: "examples/02.Types_Formatting_IO/integers_booleans.c:15:8: style: Con
   \ information: Cppcheck cannot find all the include files (use --check-config for\
   \ details) [missingInclude]\n\n"
 cc_xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<results version=\"2\">\n   \
-  \ <cppcheck version=\"2.9\"/>\n    <errors>\n        <error id=\"knownConditionTrueFalse\"\
+  \ <cppcheck version=\"2.10.3\"/>\n    <errors>\n        <error id=\"knownConditionTrueFalse\"\
   \ severity=\"style\" msg=\"Condition &apos;v1&apos; is always true\" verbose=\"\
   Condition &apos;v1&apos; is always true\" cwe=\"571\" file0=\"examples/02.Types_Formatting_IO/integers_booleans.c\"\
   >\n            <location file=\"examples/02.Types_Formatting_IO/integers_booleans.c\"\

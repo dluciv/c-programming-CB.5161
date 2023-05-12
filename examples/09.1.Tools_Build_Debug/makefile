@@ -6,7 +6,7 @@ LNK=clang
 	$(CC) -c $(CCOPT) -o $@ $<
 
 program : mod.o prog.o
-	$(LNK) -o $@ $?
+	$(LNK) -o $@ $^
 
 all : program
 

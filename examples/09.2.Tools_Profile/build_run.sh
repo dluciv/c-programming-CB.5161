@@ -8,4 +8,4 @@ cc -Wall -pg -o test_gprof test_gprof.c
 gprof test_gprof gmon.out >gprof.txt
 
 python3 -m gprof2dot <gprof.txt >gprof.dot
-dot -Tpdf -o z.pdf z.dot
+dot -Tpdf -o gprof.pdf gprof.dot

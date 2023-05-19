@@ -3,11 +3,7 @@
 
 #define EMPTY_LIST 0
 
-struct Node
-{
-  int value;
-  struct Node *next;
-};
+struct Node;
 
 typedef struct Node * List;
 

@@ -2,6 +2,12 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+struct Node
+{
+  int value;
+  struct Node *next;
+};
+
 List l_prepend(List l, int v)
 {
     List h = (List)malloc(sizeof(struct Node));

@@ -7,6 +7,8 @@ int main()
     l = l_prepend(l, 5);
     l = l_prepend(l, 4);
     l = l_prepend(l, 3);
+    l_print(l);
+
     l = l_prepend(l, 2);
     l = l_prepend(l, 1);
     l = l_append(l, 6);

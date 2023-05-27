@@ -5,7 +5,7 @@ ffibuilder = FFI()
 
 ffibuilder.cdef("float pi_approx(int n);")
 
-ffibuilder.set_source("_pi",  # name of the output C extension
+ffibuilder.set_source("ffi_pi",  # name of the output C extension
 """
     #include "pi_approx.h"
 """,

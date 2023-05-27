@@ -82,42 +82,42 @@ cc_report: "examples/02.Types_Formatting_IO/integers_booleans.c:15:8: style: Con
   \ style: The scope of the variable 'x' can be reduced. [variableScope]\n  double\
   \ i,x,y,sum=0;\n           ^\nexamples/13.Faster_Python_C/2.CFFI/pi_approx.c:10:14:\
   \ style: The scope of the variable 'y' can be reduced. [variableScope]\n  double\
-  \ i,x,y,sum=0;\n             ^\nexamples/14.Cross_Compiling/ZX_Spectrum/hwe.c:16:5:\
+  \ i,x,y,sum=0;\n             ^\nexamples/14.Cross_Compiling/1.ZX_Spectrum/hwe.c:16:5:\
   \ portability: %d in format string (no. 1) requires 'int' but the argument type\
   \ is 'size_t {aka unsigned long}'. [invalidPrintfArgType_sint]\n    printf(\"%d,\
   \ %d, %d, %d\\n\", sizeof(int), sizeof(long), sizeof(float), sizeof(double));\n\
-  \    ^\nexamples/14.Cross_Compiling/ZX_Spectrum/hwe.c:16:5: portability: %d in format\
-  \ string (no. 2) requires 'int' but the argument type is 'size_t {aka unsigned long}'.\
-  \ [invalidPrintfArgType_sint]\n    printf(\"%d, %d, %d, %d\\n\", sizeof(int), sizeof(long),\
-  \ sizeof(float), sizeof(double));\n    ^\nexamples/14.Cross_Compiling/ZX_Spectrum/hwe.c:16:5:\
+  \    ^\nexamples/14.Cross_Compiling/1.ZX_Spectrum/hwe.c:16:5: portability: %d in\
+  \ format string (no. 2) requires 'int' but the argument type is 'size_t {aka unsigned\
+  \ long}'. [invalidPrintfArgType_sint]\n    printf(\"%d, %d, %d, %d\\n\", sizeof(int),\
+  \ sizeof(long), sizeof(float), sizeof(double));\n    ^\nexamples/14.Cross_Compiling/1.ZX_Spectrum/hwe.c:16:5:\
   \ portability: %d in format string (no. 3) requires 'int' but the argument type\
   \ is 'size_t {aka unsigned long}'. [invalidPrintfArgType_sint]\n    printf(\"%d,\
   \ %d, %d, %d\\n\", sizeof(int), sizeof(long), sizeof(float), sizeof(double));\n\
-  \    ^\nexamples/14.Cross_Compiling/ZX_Spectrum/hwe.c:16:5: portability: %d in format\
-  \ string (no. 4) requires 'int' but the argument type is 'size_t {aka unsigned long}'.\
-  \ [invalidPrintfArgType_sint]\n    printf(\"%d, %d, %d, %d\\n\", sizeof(int), sizeof(long),\
-  \ sizeof(float), sizeof(double));\n    ^\nexamples/14.Cross_Compiling/ZX_Spectrum/hwe.c:10:42:\
+  \    ^\nexamples/14.Cross_Compiling/1.ZX_Spectrum/hwe.c:16:5: portability: %d in\
+  \ format string (no. 4) requires 'int' but the argument type is 'size_t {aka unsigned\
+  \ long}'. [invalidPrintfArgType_sint]\n    printf(\"%d, %d, %d, %d\\n\", sizeof(int),\
+  \ sizeof(long), sizeof(float), sizeof(double));\n    ^\nexamples/14.Cross_Compiling/1.ZX_Spectrum/hwe.c:10:42:\
   \ style: Variable 'i' is assigned a value that is never used. [unreadVariable]\n\
   \    for(int i = 1; i < 10; t *= x, f *= i++)\n                                \
-  \         ^\nexamples/14.Cross_Compiling/ZX_Spectrum/hwe_no_printf.c:37:5: portability:\
+  \         ^\nexamples/14.Cross_Compiling/1.ZX_Spectrum/hwe_no_printf.c:37:5: portability:\
   \ %d in format string (no. 1) requires 'int' but the argument type is 'size_t {aka\
   \ unsigned long}'. [invalidPrintfArgType_sint]\n    printf(\"%d, %d, %d, %d\\n\"\
-  , sizeof(int), sizeof(long), sizeof(float), sizeof(double));\n    ^\nexamples/14.Cross_Compiling/ZX_Spectrum/hwe_no_printf.c:37:5:\
+  , sizeof(int), sizeof(long), sizeof(float), sizeof(double));\n    ^\nexamples/14.Cross_Compiling/1.ZX_Spectrum/hwe_no_printf.c:37:5:\
   \ portability: %d in format string (no. 2) requires 'int' but the argument type\
   \ is 'size_t {aka unsigned long}'. [invalidPrintfArgType_sint]\n    printf(\"%d,\
   \ %d, %d, %d\\n\", sizeof(int), sizeof(long), sizeof(float), sizeof(double));\n\
-  \    ^\nexamples/14.Cross_Compiling/ZX_Spectrum/hwe_no_printf.c:37:5: portability:\
+  \    ^\nexamples/14.Cross_Compiling/1.ZX_Spectrum/hwe_no_printf.c:37:5: portability:\
   \ %d in format string (no. 3) requires 'int' but the argument type is 'size_t {aka\
   \ unsigned long}'. [invalidPrintfArgType_sint]\n    printf(\"%d, %d, %d, %d\\n\"\
-  , sizeof(int), sizeof(long), sizeof(float), sizeof(double));\n    ^\nexamples/14.Cross_Compiling/ZX_Spectrum/hwe_no_printf.c:37:5:\
+  , sizeof(int), sizeof(long), sizeof(float), sizeof(double));\n    ^\nexamples/14.Cross_Compiling/1.ZX_Spectrum/hwe_no_printf.c:37:5:\
   \ portability: %d in format string (no. 4) requires 'int' but the argument type\
   \ is 'size_t {aka unsigned long}'. [invalidPrintfArgType_sint]\n    printf(\"%d,\
   \ %d, %d, %d\\n\", sizeof(int), sizeof(long), sizeof(float), sizeof(double));\n\
-  \    ^\nexamples/14.Cross_Compiling/ZX_Spectrum/hwe_no_printf.c:31:42: style: Variable\
-  \ 'i' is assigned a value that is never used. [unreadVariable]\n    for(int i =\
-  \ 1; i < 10; t *= x, f *= i++)\n                                         ^\nnofile:0:0:\
-  \ information: Cppcheck cannot find all the include files (use --check-config for\
-  \ details) [missingInclude]\n\n"
+  \    ^\nexamples/14.Cross_Compiling/1.ZX_Spectrum/hwe_no_printf.c:31:42: style:\
+  \ Variable 'i' is assigned a value that is never used. [unreadVariable]\n    for(int\
+  \ i = 1; i < 10; t *= x, f *= i++)\n                                         ^\n\
+  nofile:0:0: information: Cppcheck cannot find all the include files (use --check-config\
+  \ for details) [missingInclude]\n\n"
 cc_xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<results version=\"2\">\n   \
   \ <cppcheck version=\"2.10.3\"/>\n    <errors>\n        <error id=\"knownConditionTrueFalse\"\
   \ severity=\"style\" msg=\"Condition &apos;v1&apos; is always true\" verbose=\"\
@@ -320,61 +320,61 @@ cc_xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<results version=\"2\">\n  
   %d in format string (no. 1) requires &apos;int&apos; but the argument type is &apos;size_t\
   \ {aka unsigned long}&apos;.\" verbose=\"%d in format string (no. 1) requires &apos;int&apos;\
   \ but the argument type is &apos;size_t {aka unsigned long}&apos;.\" cwe=\"686\"\
-  \ file0=\"examples/14.Cross_Compiling/ZX_Spectrum/hwe.c\">\n            <location\
-  \ file=\"examples/14.Cross_Compiling/ZX_Spectrum/hwe.c\" line=\"16\" column=\"5\"\
-  />\n        </error>\n        <error id=\"invalidPrintfArgType_sint\" severity=\"\
+  \ file0=\"examples/14.Cross_Compiling/1.ZX_Spectrum/hwe.c\">\n            <location\
+  \ file=\"examples/14.Cross_Compiling/1.ZX_Spectrum/hwe.c\" line=\"16\" column=\"\
+  5\"/>\n        </error>\n        <error id=\"invalidPrintfArgType_sint\" severity=\"\
   portability\" msg=\"%d in format string (no. 2) requires &apos;int&apos; but the\
   \ argument type is &apos;size_t {aka unsigned long}&apos;.\" verbose=\"%d in format\
   \ string (no. 2) requires &apos;int&apos; but the argument type is &apos;size_t\
-  \ {aka unsigned long}&apos;.\" cwe=\"686\" file0=\"examples/14.Cross_Compiling/ZX_Spectrum/hwe.c\"\
-  >\n            <location file=\"examples/14.Cross_Compiling/ZX_Spectrum/hwe.c\"\
+  \ {aka unsigned long}&apos;.\" cwe=\"686\" file0=\"examples/14.Cross_Compiling/1.ZX_Spectrum/hwe.c\"\
+  >\n            <location file=\"examples/14.Cross_Compiling/1.ZX_Spectrum/hwe.c\"\
   \ line=\"16\" column=\"5\"/>\n        </error>\n        <error id=\"invalidPrintfArgType_sint\"\
   \ severity=\"portability\" msg=\"%d in format string (no. 3) requires &apos;int&apos;\
   \ but the argument type is &apos;size_t {aka unsigned long}&apos;.\" verbose=\"\
   %d in format string (no. 3) requires &apos;int&apos; but the argument type is &apos;size_t\
-  \ {aka unsigned long}&apos;.\" cwe=\"686\" file0=\"examples/14.Cross_Compiling/ZX_Spectrum/hwe.c\"\
-  >\n            <location file=\"examples/14.Cross_Compiling/ZX_Spectrum/hwe.c\"\
+  \ {aka unsigned long}&apos;.\" cwe=\"686\" file0=\"examples/14.Cross_Compiling/1.ZX_Spectrum/hwe.c\"\
+  >\n            <location file=\"examples/14.Cross_Compiling/1.ZX_Spectrum/hwe.c\"\
   \ line=\"16\" column=\"5\"/>\n        </error>\n        <error id=\"invalidPrintfArgType_sint\"\
   \ severity=\"portability\" msg=\"%d in format string (no. 4) requires &apos;int&apos;\
   \ but the argument type is &apos;size_t {aka unsigned long}&apos;.\" verbose=\"\
   %d in format string (no. 4) requires &apos;int&apos; but the argument type is &apos;size_t\
-  \ {aka unsigned long}&apos;.\" cwe=\"686\" file0=\"examples/14.Cross_Compiling/ZX_Spectrum/hwe.c\"\
-  >\n            <location file=\"examples/14.Cross_Compiling/ZX_Spectrum/hwe.c\"\
+  \ {aka unsigned long}&apos;.\" cwe=\"686\" file0=\"examples/14.Cross_Compiling/1.ZX_Spectrum/hwe.c\"\
+  >\n            <location file=\"examples/14.Cross_Compiling/1.ZX_Spectrum/hwe.c\"\
   \ line=\"16\" column=\"5\"/>\n        </error>\n        <error id=\"unreadVariable\"\
   \ severity=\"style\" msg=\"Variable &apos;i&apos; is assigned a value that is never\
   \ used.\" verbose=\"Variable &apos;i&apos; is assigned a value that is never used.\"\
-  \ cwe=\"563\" file0=\"examples/14.Cross_Compiling/ZX_Spectrum/hwe.c\">\n       \
-  \     <location file=\"examples/14.Cross_Compiling/ZX_Spectrum/hwe.c\" line=\"10\"\
-  \ column=\"42\"/>\n            <symbol>i</symbol>\n        </error>\n        <error\
-  \ id=\"invalidPrintfArgType_sint\" severity=\"portability\" msg=\"%d in format string\
-  \ (no. 1) requires &apos;int&apos; but the argument type is &apos;size_t {aka unsigned\
-  \ long}&apos;.\" verbose=\"%d in format string (no. 1) requires &apos;int&apos;\
+  \ cwe=\"563\" file0=\"examples/14.Cross_Compiling/1.ZX_Spectrum/hwe.c\">\n     \
+  \       <location file=\"examples/14.Cross_Compiling/1.ZX_Spectrum/hwe.c\" line=\"\
+  10\" column=\"42\"/>\n            <symbol>i</symbol>\n        </error>\n       \
+  \ <error id=\"invalidPrintfArgType_sint\" severity=\"portability\" msg=\"%d in format\
+  \ string (no. 1) requires &apos;int&apos; but the argument type is &apos;size_t\
+  \ {aka unsigned long}&apos;.\" verbose=\"%d in format string (no. 1) requires &apos;int&apos;\
   \ but the argument type is &apos;size_t {aka unsigned long}&apos;.\" cwe=\"686\"\
-  \ file0=\"examples/14.Cross_Compiling/ZX_Spectrum/hwe_no_printf.c\">\n         \
-  \   <location file=\"examples/14.Cross_Compiling/ZX_Spectrum/hwe_no_printf.c\" line=\"\
-  37\" column=\"5\"/>\n        </error>\n        <error id=\"invalidPrintfArgType_sint\"\
+  \ file0=\"examples/14.Cross_Compiling/1.ZX_Spectrum/hwe_no_printf.c\">\n       \
+  \     <location file=\"examples/14.Cross_Compiling/1.ZX_Spectrum/hwe_no_printf.c\"\
+  \ line=\"37\" column=\"5\"/>\n        </error>\n        <error id=\"invalidPrintfArgType_sint\"\
   \ severity=\"portability\" msg=\"%d in format string (no. 2) requires &apos;int&apos;\
   \ but the argument type is &apos;size_t {aka unsigned long}&apos;.\" verbose=\"\
   %d in format string (no. 2) requires &apos;int&apos; but the argument type is &apos;size_t\
-  \ {aka unsigned long}&apos;.\" cwe=\"686\" file0=\"examples/14.Cross_Compiling/ZX_Spectrum/hwe_no_printf.c\"\
-  >\n            <location file=\"examples/14.Cross_Compiling/ZX_Spectrum/hwe_no_printf.c\"\
+  \ {aka unsigned long}&apos;.\" cwe=\"686\" file0=\"examples/14.Cross_Compiling/1.ZX_Spectrum/hwe_no_printf.c\"\
+  >\n            <location file=\"examples/14.Cross_Compiling/1.ZX_Spectrum/hwe_no_printf.c\"\
   \ line=\"37\" column=\"5\"/>\n        </error>\n        <error id=\"invalidPrintfArgType_sint\"\
   \ severity=\"portability\" msg=\"%d in format string (no. 3) requires &apos;int&apos;\
   \ but the argument type is &apos;size_t {aka unsigned long}&apos;.\" verbose=\"\
   %d in format string (no. 3) requires &apos;int&apos; but the argument type is &apos;size_t\
-  \ {aka unsigned long}&apos;.\" cwe=\"686\" file0=\"examples/14.Cross_Compiling/ZX_Spectrum/hwe_no_printf.c\"\
-  >\n            <location file=\"examples/14.Cross_Compiling/ZX_Spectrum/hwe_no_printf.c\"\
+  \ {aka unsigned long}&apos;.\" cwe=\"686\" file0=\"examples/14.Cross_Compiling/1.ZX_Spectrum/hwe_no_printf.c\"\
+  >\n            <location file=\"examples/14.Cross_Compiling/1.ZX_Spectrum/hwe_no_printf.c\"\
   \ line=\"37\" column=\"5\"/>\n        </error>\n        <error id=\"invalidPrintfArgType_sint\"\
   \ severity=\"portability\" msg=\"%d in format string (no. 4) requires &apos;int&apos;\
   \ but the argument type is &apos;size_t {aka unsigned long}&apos;.\" verbose=\"\
   %d in format string (no. 4) requires &apos;int&apos; but the argument type is &apos;size_t\
-  \ {aka unsigned long}&apos;.\" cwe=\"686\" file0=\"examples/14.Cross_Compiling/ZX_Spectrum/hwe_no_printf.c\"\
-  >\n            <location file=\"examples/14.Cross_Compiling/ZX_Spectrum/hwe_no_printf.c\"\
+  \ {aka unsigned long}&apos;.\" cwe=\"686\" file0=\"examples/14.Cross_Compiling/1.ZX_Spectrum/hwe_no_printf.c\"\
+  >\n            <location file=\"examples/14.Cross_Compiling/1.ZX_Spectrum/hwe_no_printf.c\"\
   \ line=\"37\" column=\"5\"/>\n        </error>\n        <error id=\"unreadVariable\"\
   \ severity=\"style\" msg=\"Variable &apos;i&apos; is assigned a value that is never\
   \ used.\" verbose=\"Variable &apos;i&apos; is assigned a value that is never used.\"\
-  \ cwe=\"563\" file0=\"examples/14.Cross_Compiling/ZX_Spectrum/hwe_no_printf.c\"\
-  >\n            <location file=\"examples/14.Cross_Compiling/ZX_Spectrum/hwe_no_printf.c\"\
+  \ cwe=\"563\" file0=\"examples/14.Cross_Compiling/1.ZX_Spectrum/hwe_no_printf.c\"\
+  >\n            <location file=\"examples/14.Cross_Compiling/1.ZX_Spectrum/hwe_no_printf.c\"\
   \ line=\"31\" column=\"42\"/>\n            <symbol>i</symbol>\n        </error>\n\
   \        <error id=\"missingInclude\" severity=\"information\" msg=\"Cppcheck cannot\
   \ find all the include files (use --check-config for details)\" verbose=\"Cppcheck\

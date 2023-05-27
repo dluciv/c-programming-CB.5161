@@ -1,13 +1,13 @@
 LIB_PACKAGES=igraph
-CC=gcc
+CC=clang
 CCOPT=`pkg-config --cflags $(LIB_PACKAGES)`
-LNK=gcc
+LNK=clang
 LNKOPT=`pkg-config --libs $(LIB_PACKAGES)`
 
 %.o : %.c
-	$(CC) -c $(CCOPT) -o $@ $<
+	$(CC) -c $(CCOPT) -o $@ $^
 
-program : igd.o
+program : igraph_small.o
 	$(LNK) -o $@ $(LNKOPT) $?
 
 all : program

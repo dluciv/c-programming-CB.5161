@@ -9,14 +9,16 @@ is the most suitable option for them.
 We will try to reviwe one of popular retro architectures — [ZX Spectrum](https://en.wikipedia.org/wiki/ZX_Spectrum) created in the
 beginning of 1980s in Sinclair Research, UK.
 
-## Installation
+## Host setup
+
+### Installation
 
 * Install [Z88DK](https://z88dk.org/site/download) by any mean.
   Either use your package manager or download binaries, or download and build sources.
 
 * Install [FUSE Spectrum emulator](https://en.wikipedia.org/wiki/Fuse_(emulator)).
 
-## Setup environment
+### Setup environment
 
 On my system, I downloaded and extracted the binary package to `$HOME/.local/opt/z88dk`.
 Under that folder, they provide `set_environment.sh` script to set environment.
@@ -29,7 +31,7 @@ So before calling compiler, I do:
 
 You can correct everything for your system for sure.
 
-## Use scripts
+### Use scripts
 
 To compile, link and so on:
 
@@ -43,3 +45,21 @@ To run, use:
     ./_run.sh
 
 which loads and launches cassette image with FUSE Spectrum emulator.
+
+## Docker Setup
+
+It is often difficult to setup Z88DK. So we will use Docker virtualization system.
+
+```
+systemctl start docker
+docker pull z88dk/z88dk
+mkdir -p /tmp/zcc
+```
+
+Then put sources to `/tmp/zcc`.
+
+```
+docker run -it -v /tmp/zcc:/src z88dk/z88dk
+```
+
+And then try to run compiler as above. Just change ZCC command line to `echo` command and grab its args.

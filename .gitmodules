@@ -1,0 +1,3 @@
+[submodule "examples/14.Cross_Compiling/1.Z80_ZX_CPM/cpm"]
+	path = examples/14.Cross_Compiling/1.Z80_ZX_CPM/cpm
+	url = https://github.com/jhallen/cpm
